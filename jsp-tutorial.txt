@@ -1,0 +1,102 @@
+jsp-tutorial.txt
+
+// -------------------------------------------------------
+// JSP pages
+// comment
+<%--
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 08.01.2022
+  Time: 6:49
+  To change this template use File | Settings | File Templates.
+--%>
+// description page 
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+// add tab prefix
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+// -------------------------------------------------------
+// JSP ПРОБЛЕМЫ
+
+// Передача переменных из скриплета в c:
+//   How to pass java variables from scriptlets to c:when expression in jstl?
+//   https://stackoverflow.com/questions/25893913/how-to-pass-java-variables-from-scriptlets-to-cwhen-expression-in-jstl
+
+// -------------------------------------------------------
+// JSP pages and MVC 
+
+// Руководство Java JSP для начинающих
+//   https://betacode.net/10263/java-jsp
+
+
+// Обращение к объекту MVC
+${libItem.libraryItemNo}
+<p>${libItemEntities}</p>
+<td>${libItem.libraryItemNo}</td>
+
+// Передача объекта MVC
+    @GetMapping(value = "/")
+    public ModelAndView allLibItems() {
+        List<LibItemEntity> libItemEntities = libItemEntityService.findAllLibItems();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("items");
+        modelAndView.addObject("libItemList", libItemEntities);
+        return modelAndView;
+    }
+
+// Код в JSP
+
+        <%
+            Random random = new Random();
+			// Выводим в консоль
+            System.out.println(" Random: " + random.nextBoolean());
+        %>
+// Код в JSP
+  <%
+      java.util.Date date = new java.util.Date();
+  %>
+  <h2>
+      Now is
+      <%=date.toString()%>
+  </h2>
+  
+// -------------------------------------------------------
+// JSTL (JavaServer Pages Standard Tag Library) Стандартная Библиотека Тегов JSP
+// Подключение JSTL core
+
+// pom.xml
+<dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+</dependency>
+
+// jsp
+// тут подключается JSTL core, которая включает основные теги создания циклов, условий и т.д.
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
+
+// Цикл c:forEach
+        <c:forEach var="libItem" items="${libItemList}">
+            <tr>
+                <td>${libItem.libraryItemNo}</td>
+                <td>${libItem.libraryNo}</td>
+                <td>${libItem.itemName}</td>
+                <td>${libItem.itemAuthor}</td>
+                <td>${libItem.genre}</td>
+                <td>${libItem.itemDesc}</td>
+                <td>${libItem.itemYear}</td>
+                <td>${libItem.publisherName}</td>
+                <td>${libItem.pages}</td>
+                <td>${libItem.addingDate}</td>
+                <td>
+                    <a href="/edit/${libItem.libraryItemNo}">edit</a>
+                    <a href="/delete/${libItem.libraryItemNo}">delete</a>
+                </td>
+            </tr>
+        </c:forEach>
+// Условия
+    <c:if test="${empty libItem.itemName}">
+        <c:url value="/additem" var="var"/>
+    </c:if>
+	

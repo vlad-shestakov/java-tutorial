@@ -31,13 +31,7 @@ Java-tutorial
 // С внешней библиотекой
 //   https://stackoverflow.editcode.net/thread-119505-1-1.html
 
-// Руководство Spring Boot, Spring JDBC и Spring Transaction
-//   https://betacode.net/11663/spring-boot-spring-jdbc-and-spring-transaction
-
 // Еще советую Вам ознакомиться с книгой Крейга Уоллса "Spring в действии" (4-е издание, по-моему, сейчас актуально). Дядька очень доступно объясняет все заданные Вами вопросы, и работу многих компонентов фреймворка в целом.
-
-// Общие свойства Spring Boot
-//   https://betacode.net/11685/spring-boot-common-properties
 
 
 // -------------------------------------------------------
@@ -1434,8 +1428,7 @@ public final class Integer {
 	SpEL 			— Spring Expression Language — язык выражений Spring;
 
 // Spring Boot
-//   Упрощает создание приложений на основе Spring
-//   https://javarush.ru/groups/posts/3092-spring-ehto-nestrashno
+// see // SPRING BOOT 
 
 // Spring Data
 //   Значительно упрощает использование технологий доступа к данным, реляционных и нереляционных баз данных
@@ -1461,12 +1454,6 @@ Spring Statemachine
 Spring Vault
 
 
-// Spring — это не страшно, или как стартовать WEB-сервер со Spring Boot за 5 минут
-//   https://javarush.ru/groups/posts/3092-spring-ehto-nestrashno
-
-// Spring — это не страшно, или как подключить базу данных для студенческого проекта за 5 минут
-//   https://javarush.ru/groups/posts/3093-spring-ehto-nestrashno-ili-kak-podkljuchitjh-bazu-dannihkh-dlja-studencheskogo-proekta-za-5-min
-
 // -------------------------------------------------------
 // Spring JPA
 // - библиотека, которая добавляет дополнительный уровень абстракции поверх ORM реализации JPA
@@ -1488,14 +1475,9 @@ Spring Vault
 //   https://habr.com/ru/post/435114/
 // Spring Data JPA: что такое хорошо, и что такое плохо
 //   https://habr.com/ru/post/441386/
-// Руководство Spring Boot и Spring Data JPA - betacode
-//   https://betacode.net/11897/spring-boot-and-spring-data-jpa
 
 // Пишем простое веб-приложение используя Spring MVC, Spring Data JPA и Hibernate
 //   https://habr.com/ru/post/479286/
-
-// Spring Boot — пример с Postgres и JPA [NR]
-//   https://java-master.com/spring-boot-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%81-postgres-%d0%b8-jpa/
 
 // ***** Create a Spring MVC project with maven and IntelliJ IDEA Community Edition / Хорошо сработано
 //   https://medium.com/panchalprogrammingacademy/create-a-spring-mvc-project-with-maven-and-intellij-idea-community-edition-1d31b3efe078
@@ -1575,107 +1557,35 @@ Spring Vault
 // Apache iBatis
 //   https://question-it.com/questions/4942552/kak-vypolnit-fajl-stsenarija-sql-na-java
 
-// -------------------------------------------------------
-// JSP pages
-// comment
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 08.01.2022
-  Time: 6:49
-  To change this template use File | Settings | File Templates.
---%>
-// description page 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-// add tab prefix
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-// -------------------------------------------------------
-// JSP ПРОБЛЕМЫ
-
-// Передача переменных из скриплета в c:
-//   How to pass java variables from scriptlets to c:when expression in jstl?
-//   https://stackoverflow.com/questions/25893913/how-to-pass-java-variables-from-scriptlets-to-cwhen-expression-in-jstl
-
-// -------------------------------------------------------
-// JSP pages and MVC 
-
-// Руководство Java JSP для начинающих
-//   https://betacode.net/10263/java-jsp
-
-
-// Обращение к объекту MVC
-${libItem.libraryItemNo}
-<p>${libItemEntities}</p>
-<td>${libItem.libraryItemNo}</td>
-
-// Передача объекта MVC
-    @GetMapping(value = "/")
-    public ModelAndView allLibItems() {
-        List<LibItemEntity> libItemEntities = libItemEntityService.findAllLibItems();
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("items");
-        modelAndView.addObject("libItemList", libItemEntities);
-        return modelAndView;
-    }
-
-// Код в JSP
-
-        <%
-            Random random = new Random();
-			// Выводим в консоль
-            System.out.println(" Random: " + random.nextBoolean());
-        %>
-// Код в JSP
-  <%
-      java.util.Date date = new java.util.Date();
-  %>
-  <h2>
-      Now is
-      <%=date.toString()%>
-  </h2>
-  
-// -------------------------------------------------------
-// JSTL (JavaServer Pages Standard Tag Library) Стандартная Библиотека Тегов JSP
-// Подключение JSTL core
-
-// pom.xml
-<dependency>
-      <groupId>jstl</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-</dependency>
-
-// jsp
-// тут подключается JSTL core, которая включает основные теги создания циклов, условий и т.д.
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-
-
-// Цикл c:forEach
-        <c:forEach var="libItem" items="${libItemList}">
-            <tr>
-                <td>${libItem.libraryItemNo}</td>
-                <td>${libItem.libraryNo}</td>
-                <td>${libItem.itemName}</td>
-                <td>${libItem.itemAuthor}</td>
-                <td>${libItem.genre}</td>
-                <td>${libItem.itemDesc}</td>
-                <td>${libItem.itemYear}</td>
-                <td>${libItem.publisherName}</td>
-                <td>${libItem.pages}</td>
-                <td>${libItem.addingDate}</td>
-                <td>
-                    <a href="/edit/${libItem.libraryItemNo}">edit</a>
-                    <a href="/delete/${libItem.libraryItemNo}">delete</a>
-                </td>
-            </tr>
-        </c:forEach>
-// Условия
-    <c:if test="${empty libItem.itemName}">
-        <c:url value="/additem" var="var"/>
-    </c:if>
 	
-	
+// -------------------------------------------------------
+// SPRING BOOT 
+//   Проект, целью которого является упрощение создания приложений на основе Spring. 
+//   Он позволяет наиболее простым способом создать web-приложение, требуя от разработчиков минимум усилий по его настройке и написанию кода.
+
+// Знакомство со Spring Boot
+//   https://topjava.ru/blog/introducing-spring-boot
+
+// Spring Boot | Spring по-русски!
+//   http://spring-projects.ru/projects/spring-boot/
+
+// ***** Spring — это не страшно, или как стартовать WEB-сервер со Spring Boot за 5 минут [NR]
+//   14 статей (+ H2 (ейч ту) база в памяти / + библиотека Lombok / + REST контроллер)
+//   https://javarush.ru/groups/posts/3092-spring-ehto-nestrashno
+
+// Руководство Spring Boot, Spring JDBC и Spring Transaction
+//   https://betacode.net/11663/spring-boot-spring-jdbc-and-spring-transaction
+
+// Общие свойства Spring Boot
+//   https://betacode.net/11685/spring-boot-common-properties
+
+// Руководство Spring Boot и Spring Data JPA - betacode
+//   https://betacode.net/11897/spring-boot-and-spring-data-jpa
+
+// Spring Boot — пример с Postgres и JPA [NR]
+//   https://java-master.com/spring-boot-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%81-postgres-%d0%b8-jpa/
+
+
 // -------------------------------------------------------
 // JAVA ENTERPRISE
 
