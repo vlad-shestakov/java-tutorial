@@ -54,6 +54,19 @@ Java-tutorial
 //   (aka Шпаргалка Java-программиста 5)
 //   https://habr.com/ru/company/luxoft/blog/272025/
 
+// -------------------------------------------------------
+// ШАБЛОНЫ ПРОЕКТИРОВАНИЯ / ПАТТЕРНЫ
+
+// Шаблон проектирования
+//   https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F
+
+// DTO - Data Transfer Object
+//   https://ru.wikipedia.org/wiki/DTO
+
+// Data Access Object (DAO) 
+//   создать специальную прослойку, которая будет отвечать исключительно за доступ к данным 
+//   (работа с базой данных или другим механизмом хранения). 
+
 
 // -------------------------------------------------------
 // -------------------------------------------------------
@@ -1154,6 +1167,7 @@ public final class Integer {
 // JAR-файлы — что это такое ?
 //   https://java-course.ru/begin/jar/
 
+
 // -------------------------------------------------------
 // HIBERNATE
 // Hibernate одна из самых популярных открытых реализаций последней версии спецификации (JPA 2.1)
@@ -1660,18 +1674,19 @@ ${libItem.libraryItemNo}
 	
 	
 // -------------------------------------------------------
-// ШАБЛОНЫ ПРОЕКТИРОВАНИЯ 
+// JAVA ENTERPRISE
 
-// Шаблон проектирования
-//   https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F
+// ***** Введение в Enterprise-разработку (в 8 частях) [NR] (Понятно! В 6 статье подъем томката доступно, выпуск сертификата для HTTPS)
+//   https://javarush.ru/groups/posts/2514-vvedenie-v-enterprise-razrabotku
+//	 https://javarush.ru/groups/posts/2519-chastjh-2-pogovorim-nemnogo-ob-arkhitekture-po
+//	 https://javarush.ru/groups/posts/2521-chastjh-3-protokolih-httphttps
+//	 https://javarush.ru/groups/posts/2523-chastjh-4osnovih-maven
+//	 https://javarush.ru/groups/posts/2529-chastjh-5-servletih-pishem-prostoe-veb-prilozhenie
+//	 https://javarush.ru/groups/posts/2533-chastjh-6-konteynerih-servletov (TOMCAT)
+//	 https://javarush.ru/groups/posts/2536-chastjh-7-znakomstvo-s-patternom-mvc-model-view-controller
+//	 https://javarush.ru/groups/posts/2537-chastjh-8-pishem-neboljhshoe-prilozhenie-na-spring-boot (Spring Boot)
 
-// DTO - Data Transfer Object
-//   https://ru.wikipedia.org/wiki/DTO
-
-// Data Access Object (DAO) 
-//   создать специальную прослойку, которая будет отвечать исключительно за доступ к данным 
-//   (работа с базой данных или другим механизмом хранения). 
-
-
-// -------------------------------------------------------
+// Docker: как развернуть фуллстек-приложение и не поседеть
+//   https://habr.com/ru/post/448094/
+	
 // -------------------------------------------------------
