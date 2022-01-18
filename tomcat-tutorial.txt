@@ -1,0 +1,209 @@
+tomcat-tutorial.txt
+
+# -------------------------------------------------------
+# tomcat – Контейнер сервлетов
+
+# -------------------------------------------------------
+
+# ***** Часть 6. Контейнеры сервлетов
+#   https://javarush.ru/groups/posts/2533-chastjh-6-konteynerih-servletov
+# ***** Введение в Enterprise-разработку (в 8 частях) [NR] (Понятно! В 6 статье подъем томката доступно, выпуск сертификата для HTTPS)
+#   https://javarush.ru/groups/posts/2514-vvedenie-v-enterprise-razrabotku
+#	 https://javarush.ru/groups/posts/2519-chastjh-2-pogovorim-nemnogo-ob-arkhitekture-po
+#	 https://javarush.ru/groups/posts/2521-chastjh-3-protokolih-httphttps
+#	 https://javarush.ru/groups/posts/2523-chastjh-4osnovih-maven
+#	 https://javarush.ru/groups/posts/2529-chastjh-5-servletih-pishem-prostoe-veb-prilozhenie
+#	 https://javarush.ru/groups/posts/2533-chastjh-6-konteynerih-servletov (TOMCAT)
+#	 https://javarush.ru/groups/posts/2536-chastjh-7-znakomstvo-s-patternom-mvc-model-view-controller
+#	 https://javarush.ru/groups/posts/2537-chastjh-8-pishem-neboljhshoe-prilozhenie-na-spring-boot (Spring Boot)
+
+# tomcat – коротко для windows
+#   https://javarush.ru/groups/posts/1085-tomcat---korotko-dlja-windows
+
+# -------------------------------------------------------
+# Устновка, настройка 
+Скачиваем, распаковываем 
+	http://tomcat.apache.org
+	JDK с сайта оракл https://www.oracle.com 
+	
+cd D:\dev\apache-tomcat-9.0.27
+D:\dev\apache-tomcat-9.0.27\bin\catalina.bat
+
+# проверим CATALINA_HOME / JAVA_HOME
+	set cata
+	set java
+можно сделать setenv.bat
+
+# -------------------------------------------------------
+# запуск
+D:\dev\apache-tomcat-9.0.27\bin\startup.bat
+D:\dev\apache-tomcat-9.0.27\bin\shutdown.bat
+D:\dev\apache-tomcat-9.0.27\bin\catalina.bat
+# Если всё пошло хорошо, то запустится окно Java-приложения в режиме консоли, в котором после запуска будет написано время старта
+иначе ошибки в окне 
+или логе в папке «e:\tomcat\apache-tomcat-8.0.15\logs
+
+# Apache Tomcat/9.0.27 Homepage
+http://127.0.0.1:8080/
+# Админка 
+http://127.0.0.1:8080/manager/html
+http://127.0.0.1:8080/examples/
+
+Логины пароли
+conf/tomcat-users.xml
+
+
+# было
+	<user username="user" password="password" roles="standard,manager-script" />
+# стало
+
+  <role rolename = "admin-gui"/>
+  <role rolename = "admin-script"/>
+  <role rolename = "manager-gui"/>
+  <role rolename = "manager-script"/>
+  <role rolename = "manager-jne"/>
+  <user username = "superadmin" password = "password" roles="admin-gui, admin-script, manager-gui, manager-jne, manager-script" />
+  <user username="user" password="password" roles="standard,manager-script" />
+  
+# Manager App How-To
+http://127.0.0.1:8080/docs/manager-howto.html
+
+# -------------------------------------------------------
+# Установка приложений
+
+# Установка серверной части веб-приложения на ОС Windows
+#   https://help.fsight.ru/ru/mergedProjects/Setup/uiwebsetup/03_setup_web/windows/installing_web_application_back_end_on_windows_os.htm
+# Как развернуть веб-приложение Java (.war) на tomcat?
+#   https://overcoder.net/q/227584/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B7%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C-%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-java-war-%D0%BD%D0%B0-tomcat
+
+После развертывания (проверьте наличие /logs dir для любых проблем), 
+он должен быть доступен через: http://host:port/yourwebappname/. Так что в вашем случае один из них:
+http://bilgin.ath.cx/TestWebApp/
+http://bilgin.ath.cx:8080/TestWebApp/
+
+
+# Админка 
+http://127.0.0.1:8080/manager
+
+# Установка приложения 1
+Загрузите файл с помощью приложения-менеджера - http://host:port/manager. 
+Вам придется заранее настроить некоторых пользователей.
+ 
+* Залогиниться
+* Развернуть / WAR файл для развёртывания / ... / Развернуть
+* Перезапустить томкат
+
+Появится в таблице - /home-library-spr-1.0-SNAPSHOT
+
+Создастся
+D:\dev\apache-tomcat-9.0.27\webapps\home-library-spr-1.0-SNAPSHOT
+
+Приложение доступно
+http://127.0.0.1:8080/home-library-spr-1.0-SNAPSHOT/
+http://127.0.0.1:8080/examples/
+http://127.0.0.1:8080/homelib
+
+
+# Установка приложения 2
+скопируйте файл yourapp.war в папку webapps
+При запуске он ее распакует в папку webapps\yourapp и запустит
+
+# Установка приложения 3
+Скопировать приложение в распакованном из war виде
+D:\dev\apache-tomcat-9.0.27\webapps\homelib
+http://127.0.0.1:8080/homelib
+
+# Установка приложения 4
+(не рекомендуется, но работает) - вручную распакуйте файл .war в виде архива .zip и поместите извлеченные файлы в webapps/webappname
+
+# Установка приложения 5 С консоли / Удаленно 
+# see URL CONSOLE
+
+
+# List Available Security Roles
+http://localhost:8080/manager/text/roles
+
+		
+
+
+# -------------------------------------------------------
+# URL CONSOLE
+# The Apache Tomcat 5.5 Servlet/JSP Container
+#   https://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html
+#   https://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html#Deploy%20A%20New%20Application%20Remotely
+
+# List Currently Deployed Applications
+http://localhost:8080/manager/html/list
+http://localhost:8080/manager/text/list
+	OK - Список приложений для виртуального хоста [localhost]
+	/:running:0:ROOT
+	/examples:running:0:examples
+	/host-manager:running:0:host-manager
+	/homelib2:stopped:0:homelib2
+	/manager:running:1:manager
+	/docs:running:0:docs
+	/homelib:running:1:homelib
+	
+
+# Stop an Existing Application
+http://localhost:8080/manager/text/stop?path=/homelib2
+	OK - Остановлено приложение по пути контекста [/homelib2]
+	
+# Start an Existing Application
+http://localhost:8080/manager/text/start?path=/homelib2
+	OK - Запущено приложение по пути контекста [/homelib2]
+
+# Установка приложения
+#   https://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html#Deploy%20A%20New%20Application%20Remotely
+#   https://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html#Deploy_A_New_Application_Archive_(WAR)_Remotely
+# 	update=true  - Обновление файла ошибки при установке 
+
+# Загрузка в путь - homelib2 / с тегом - homelib2 / из WAR - путь / update=true - Обновление файла
+# Создастся в корне homelib2.war и распакуется в папку /homelib2. Если update=true, перезальется
+http://localhost:8080/manager/text/deploy?path=/homelib2&tag=homelib2&update=true&war=file:D:/R_STUDIO/PRG/java/java-ee-projects/home-library-spr/target/home-library-spr-1.0-SNAPSHOT.war
+http://localhost:8080/manager/text/deploy?path=/homelib2&tag=homelib2&update=true&war=file:D:/R_STUDIO/PRG/java/java-ee-projects/home-library-spr/target/home-library-spr-1.2-SNAPSHOT.war
+	OK - Приложение успешно развёрнуто в контекстном пути [/homelib2]
+	
+# redeploy / Deploy a previously deployed webapp
+# В случае ошибки удалится папка и war приложения
+http://localhost:8080/manager/text/deploy?path=/homelib2&tag=homelib2
+	ОШИБКА - Не удалось развернуть приложение на контекстом пути [/homelib2]
+	и приложение убивается и удаляется
+	
+	
+# Undeploy an Existing Application
+http://localhost:8080/manager/text/undeploy?path=/homelib2
+	OK - Удалено приложение по пути контекста [/homelib2]
+	
+http://localhost:8080/manager/text/deploy?path=/homelib3&war=hl3
+
+http://localhost:8080/manager/text/deploy?path=/footoo&tag=footag
+http://localhost:8080/manager/text/deploy?war=file:/path/to/bar.war
+
+
+
+
+# -------------------------------------------------------
+# Батники
+
+
+# ---------------------
+# _Start_Tomcat.bat
+@rem _Start_Tomcat.bat
+
+call shutdown.bat
+@rem @cls
+call startup.bat
+start http://127.0.0.1:8080/homelib
+
+
+# ---------------------
+# _Start_Homelib.bat
+@rem _Start_Homelib.bat
+
+start http://127.0.0.1:8080/homelib
+
+
+
+
+# -------------------------------------------------------
