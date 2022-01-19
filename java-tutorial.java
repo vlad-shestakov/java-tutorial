@@ -1197,10 +1197,11 @@ public final class Integer {
 
 // CRUD -  акроним, обозначающий четыре базовые функции, используемые при работе с базами данных[1]: создание (англ. create), чтение (read), модификация (update), удаление (delete).
 //   https://ru.wikipedia.org/wiki/CRUD
+
 // **** Разница между JDBC, JPA, Hibernate, Spring Data JPA
 //   https://java-master.com/%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-jdbc-jpa-hibernate-spring-data-jpa/
 
-// Основы Hibernate (2008) (3оечка)
+// Основы Hibernate (2008) (3-оечка)
 //   Есть interface DAO / DAO implementation
 //   https://habr.com/ru/post/29694/
 
@@ -1406,32 +1407,28 @@ public final class Integer {
  
 
 // -------------------------------------------------------
-// SPRING
-// Spring Framework - Spring FrameworkВикипедия  site:star-wiki.ru
+// SPRING Framework
 //   https://star-wiki.ru/wiki/Spring_Framework
 
 // org.springframework:spring-webmvc:5.3.15	
 //   https://search.maven.org/artifact/org.springframework/spring-webmvc/5.3.15/jar
  
-
-
 // ***** Что нужно знать о Spring: история появления, ключевые модули, сравнение с Java EE
 //   https://javarush.ru/groups/posts/3546-chto-nuzhno-znatjh-o-spring-istorija-pojavlenija-kljuchevihe-moduli-sravnenie-s-java-ee
 
-// Spring framework
-
-	core 			— базовый функционал, реализующий понятия IoC (inversion of control) и DI (dependency injection);
-	AOP 			— Aspect-Oriented Programming — аспектно-ориентированое программирование, направленное на реализацию сквозной логики;
-	MVC и WebFlux 	— фреймворки для веб взаимодествия;
-	JDBC, ORM 		— технологии взаимодействия с базами данных;
-	Test 			— функционал для прозрачного, несложного тестирования данных Spring контейнера;
-	SpEL 			— Spring Expression Language — язык выражений Spring;
+//	core 			— базовый функционал, реализующий понятия IoC (inversion of control) и DI (dependency injection);
+//	AOP 			— Aspect-Oriented Programming — аспектно-ориентированое программирование, направленное на реализацию сквозной логики;
+//	MVC и WebFlux 	— фреймворки для веб взаимодествия;
+//	JDBC, ORM 		— технологии взаимодействия с базами данных;
+//	Test 			— функционал для прозрачного, несложного тестирования данных Spring контейнера;
+//	SpEL 			— Spring Expression Language — язык выражений Spring;
 
 // Spring Boot
 // see // SPRING BOOT 
 
 // Spring Data
 //   Значительно упрощает использование технологий доступа к данным, реляционных и нереляционных баз данных
+// see // SPRING DATA JPA 
 
 // Spring Cloud
 // Spring Security
@@ -1440,44 +1437,30 @@ public final class Integer {
 // Spring Integration
 // Spring REST
 // Spring Web Flow
-Spring WebServices
-Spring HATEOAS
-Spring Batch
-Spring AMQP
-Spring for Apache Kafka
-Spring CredHub
-Spring FLO
-Spring LDAP
-Spring Roo
-Spring Shell
-Spring Statemachine
-Spring Vault
+// Spring WebServices
+// Spring HATEOAS
+// Spring Batch
+// Spring AMQP
+// Spring for Apache Kafka
+// Spring CredHub
+// Spring FLO
+// Spring LDAP
+// Spring Roo
+// Spring Shell
+// Spring Statemachine
+// Spring Vault
 
 
 // -------------------------------------------------------
-// Spring JPA
-// - библиотека, которая добавляет дополнительный уровень абстракции поверх ORM реализации JPA
-// По-умолчанию Spring Data JPA использует Hibernate, в качестве ORM провайдера (чтобы выполнять запросы)
+// Spring Initializr
+//   ***** Генератор исходного кода для Spring проектов
+//   https://start.spring.io/
 
-// Spring Data JPA [OFFICIAL]
-//   https://spring.io/projects/spring-data-jpa
+// -------------------------------------------------------
+// SPRING MVC
 
-// Spring Data JPA
-//   https://habr.com/ru/post/435114/
-
-// Что нужно знать о Spring: история появления, ключевые модули, сравнение с Java EE
-//   https://javarush.ru/groups/posts/3546-chto-nuzhno-znatjh-o-spring-istorija-pojavlenija-kljuchevihe-moduli-sravnenie-s-java-ee
-
-
-// Spring Data Jdbc/R2dbc - Альтернатива JPA (imho - https://habr.com/ru/post/551902/)
+// Spring Data JDBC/R2dbc - Альтернатива JPA (imho - https://habr.com/ru/post/551902/)
 //   https://docs.spring.io/spring-data/jdbc/docs/2.1.7/reference/html/#reference
-// Spring Data JPA / Хабр
-//   https://habr.com/ru/post/435114/
-// Spring Data JPA: что такое хорошо, и что такое плохо
-//   https://habr.com/ru/post/441386/
-
-// Пишем простое веб-приложение используя Spring MVC, Spring Data JPA и Hibernate
-//   https://habr.com/ru/post/479286/
 
 // ***** Create a Spring MVC project with maven and IntelliJ IDEA Community Edition / Хорошо сработано
 //   https://medium.com/panchalprogrammingacademy/create-a-spring-mvc-project-with-maven-and-intellij-idea-community-edition-1d31b3efe078
@@ -1587,6 +1570,25 @@ Spring Vault
 
 
 // -------------------------------------------------------
+// SPRING JPA
+// - библиотека, которая добавляет дополнительный уровень абстракции поверх ORM реализации JPA
+// По-умолчанию Spring Data JPA использует Hibernate, в качестве ORM провайдера (чтобы выполнять запросы)
+
+// Spring Data JPA [OFFICIAL]
+//   https://spring.io/projects/spring-data-jpa
+
+// Spring Data JPA / Хабр
+//   https://habr.com/ru/post/435114/
+
+
+// Spring Data JPA: что такое хорошо, и что такое плохо
+//   https://habr.com/ru/post/441386/
+
+// Пишем простое веб-приложение используя Spring MVC, Spring Data JPA и Hibernate
+//   https://habr.com/ru/post/479286/
+
+
+// -------------------------------------------------------
 // JAVA ENTERPRISE
 
 // ***** Введение в Enterprise-разработку (в 8 частях) [NR] (Понятно! В 6 статье подъем томката доступно, выпуск сертификата для HTTPS)
@@ -1599,7 +1601,19 @@ Spring Vault
 //	 https://javarush.ru/groups/posts/2536-chastjh-7-znakomstvo-s-patternom-mvc-model-view-controller
 //	 https://javarush.ru/groups/posts/2537-chastjh-8-pishem-neboljhshoe-prilozhenie-na-spring-boot (Spring Boot)
 
+// -------------------------------------------------------
+// CI/CD
+//   Комбинация непрерывной интеграции (continuous integration) и непрерывного развертывания (continuous delivery или continuous deployment) ПО
+//   DevOps-программисты стремятся применять CI/CD практически для всех задач
+
+// DevOps (development & operations) — методология автоматизации технологических процессов сборки, настройки и развёртывания ПО
+//   https://ru.wikipedia.org/wiki/DevOps
+
 // Docker: как развернуть фуллстек-приложение и не поседеть
 //   https://habr.com/ru/post/448094/
-	
+
+// Jenkins + Docker + Gitlab + Maven создают среду непрерывной интеграции (что-то с примерами на китайском)
+//   https://russianblogs.com/article/5733701255/	
+
+// -------------------------------------------------------
 // -------------------------------------------------------
