@@ -1,12 +1,13 @@
 tomcat-tutorial.txt
 
 # -------------------------------------------------------
-# tomcat – Контейнер сервлетов
+# TOMCAT – Контейнер сервлетов
 
 # -------------------------------------------------------
 
 # ***** Часть 6. Контейнеры сервлетов
 #   https://javarush.ru/groups/posts/2533-chastjh-6-konteynerih-servletov
+
 # ***** Введение в Enterprise-разработку (в 8 частях) [NR] (Понятно! В 6 статье подъем томката доступно, выпуск сертификата для HTTPS)
 #   https://javarush.ru/groups/posts/2514-vvedenie-v-enterprise-razrabotku
 #	 https://javarush.ru/groups/posts/2519-chastjh-2-pogovorim-nemnogo-ob-arkhitekture-po
@@ -45,8 +46,11 @@ D:\dev\apache-tomcat-9.0.27\bin\catalina.bat
 
 # Apache Tomcat/9.0.27 Homepage
 http://127.0.0.1:8080/
+
 # Админка 
-http://127.0.0.1:8080/manager/html
+http://127.0.0.1:8080/manager
+
+# Примеры
 http://127.0.0.1:8080/examples/
 
 Логины пароли
@@ -180,9 +184,6 @@ http://localhost:8080/manager/text/deploy?path=/homelib3&war=hl3
 http://localhost:8080/manager/text/deploy?path=/footoo&tag=footag
 http://localhost:8080/manager/text/deploy?war=file:/path/to/bar.war
 
-
-
-
 # -------------------------------------------------------
 # Батники
 
@@ -194,8 +195,9 @@ http://localhost:8080/manager/text/deploy?war=file:/path/to/bar.war
 call shutdown.bat
 @rem @cls
 call startup.bat
+@echo ЖДЕМ 15 секунд, пока загрузится TOMCAT приложение ...
+TIMEOUT /T 15
 start http://127.0.0.1:8080/homelib
-
 
 # ---------------------
 # _Start_Homelib.bat

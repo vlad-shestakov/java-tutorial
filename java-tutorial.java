@@ -4,6 +4,7 @@ Java-tutorial
 [NR] - Не читал
 [MUST READ] - Требуется к прочтению
 [RTFM] - Официальные спецификации
+
 // -------------------------------------------------------
 
 // Топ-10 книг по Java для начинающих
@@ -13,7 +14,7 @@ Java-tutorial
 
 // Легкий старт в Java. Вводный курс для чайников
 //   https://stepik.org/course/90684/syllabus?auth=registration
-  
+
 // Модификаторы доступа. Private, protected, default, public
 //   https://javarush.ru/groups/posts/1988-modifikatorih-dostupa-private-protected-default-public
 
@@ -35,7 +36,10 @@ Java-tutorial
 
 
 // -------------------------------------------------------
-// JAVA USEFUL LINKS 
+// JAVA USEFUL LINKS
+
+// Рейтинг популярности языков программирования
+//   https://www.tiobe.com/tiobe-index/
 
 // ***** Список полезных ссылок для Java программиста
 //   350 самых популярных не мобильных Java opensource проектов на github (aka  Шпаргалка Java программиста 2)
@@ -51,6 +55,8 @@ Java-tutorial
 //   (aka Шпаргалка Java-программиста 5)
 //   https://habr.com/ru/company/luxoft/blog/272025/
 
+
+
 // -------------------------------------------------------
 // ШАБЛОНЫ ПРОЕКТИРОВАНИЯ / ПАТТЕРНЫ
 
@@ -60,22 +66,25 @@ Java-tutorial
 // DTO - Data Transfer Object
 //   https://ru.wikipedia.org/wiki/DTO
 
-// Data Access Object (DAO) 
-//   создать специальную прослойку, которая будет отвечать исключительно за доступ к данным 
-//   (работа с базой данных или другим механизмом хранения). 
+// Data Access Object (DAO)
+//   создать специальную прослойку, которая будет отвечать исключительно за доступ к данным
+//   (работа с базой данных или другим механизмом хранения).
 
-
-// -------------------------------------------------------
 // -------------------------------------------------------
 // Java
 
 // Open JDK 13
-//   https://jdk.java.net/ 
+//   https://jdk.java.net/
 
 // IntelliJ IDEA Community Edition - free
 // IntelliJ IDEA Ultimate Edition
 // IntelliJ IDEA EAP (Early Access Program) - free
 // JetBrains IntelliJ IDEA EAP (beta from JetBrains) - free
+
+// Java SE - Java Platform, Standard Edition, сокращённо Java SE (ранее Java 2 Standard Edition или J2SE) — стандартная версия платформы Java 2, предназначенная для создания и исполнения апплетов и приложений, рассчитанных на индивидуальное пользование или на использование в масштабах малого предприятия.
+//   https://ru.wikipedia.org/wiki/Java_Platform,_Standard_Edition
+
+// Java EE / Jakarta EE (ранее — Java Platform, Enterprise Edition, сокр. Java EE, до версии 5.0 — Java 2 Enterprise Edition или J2EE).  набор спецификаций и соответствующей документации для языка Java, описывающей архитектуру серверной платформы для задач средних и крупных предприятий.
 
 // -------------------------------------------------------
 // JAVA STANDARDS
@@ -86,7 +95,7 @@ Java-tutorial
 // Code Conventions for the Java Programming Language (1999) [** RTFM **]
 //   http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html
 
-// Java Style Guidelines (2015) [** RTFM **] 
+// Java Style Guidelines (2015) [** RTFM **]
 //   http://cr.openjdk.java.net/~alundblad/styleguide/
 
 	class Main
@@ -100,7 +109,7 @@ Java-tutorial
 // Комментарии
   // some text
   /* some text */
-  
+
 // Javadoc
 /** Это документационный комментарий */
 
@@ -112,7 +121,7 @@ Java-tutorial
 Это документационный комментарий
 
 *********************/
-  
+
 
 // -------------------------------------------------------
 // IDEA
@@ -139,14 +148,14 @@ Java-tutorial
 // Шаблоны IDEA
 // Ctrl+Alt+S
 
-	// sout	
+	// sout
 	System.out.println();
-	// main or psvm	
+	// main or psvm
 	public static void main(String[] args){
-	// fori	
+	// fori
 	for (int i = 0; i < ; i++) { -- }
-	// ifn	
-	if (var == null) {-- 
+	// ifn
+	if (var == null) {--
 	}
 
 // -------------------------------------------------------
@@ -161,7 +170,7 @@ Java-tutorial
 //   https://ru.wikipedia.org/wiki/Javadoc
 //   https://java-online.ru/java-javadoc.xhtml
 // Как увидеть JavaDoc в IntelliJ идее?
-//   Источник <https://coderoad.ru/11053144/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C-JavaDoc-%D0%B2-IntelliJ-%D0%B8%D0%B4%D0%B5%D0%B5> 
+//   Источник <https://coderoad.ru/11053144/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C-JavaDoc-%D0%B2-IntelliJ-%D0%B8%D0%B4%D0%B5%D0%B5>
 
 
 // однострочный комментарий;
@@ -206,15 +215,15 @@ Java-tutorial
 	double	pi  = 3.14;
 	char 	group = 'Z';	 // используется для хранения одного символа. В отличие от строк, значение переменной типа char помещается в одинарные кавычки.
 	boolean atHome = true;
-	byte 
+	byte
 	short
 	long
 	boolean f1 = x1 > x2;
-// Ссылочные	
+// Ссылочные
 	String 	abs = "123";
 	int[]	array = {1,2,3}; // массив
 	String  str = null; // ссылка никуда не указывает
-	
+
 // -------------------------------------------------------
 // Вывод в консоль
 
@@ -222,7 +231,7 @@ Java-tutorial
 	System.out.print("aa");
 	System.out.print("bb");
 	// aabb
-	
+
 	// Печать с разрывом
 	System.out.println("aa");
 	System.out.println("bb");
@@ -231,7 +240,7 @@ Java-tutorial
 	// Возвраты каретки
 	System.out.println("В методе main(String[]) выведи на экран все числа из трехмерного массива multiArray.\n" +
                 "Требования:\n");
-				
+
 	int x = 42;
 	int y = 84;
 	System.out.println(x + " " + y);    // 42 84
@@ -239,10 +248,10 @@ Java-tutorial
 
 
 // -------------------------------------------------------
-// Ввод данных 
+// Ввод данных
 
 // импорт
-import java.util.Scanner; 
+import java.util.Scanner;
 
 // Ввести строку целиком: nextLine()
 // Ввести слово (считывается до первого пробела): next()
@@ -251,11 +260,11 @@ import java.util.Scanner;
 // Ввести объект double: nextDouble()
 // Ввести объект boolean: nextBoolean()
 
-// hasNext -вернет true, если в буфере есть еще что-то 
+// hasNext -вернет true, если в буфере есть еще что-то
 
 
-// !!! Сразу после nextInt() метод nextLine() возвращает остаток предыдущей строки, не использованный при предыдущем считывании. 
-// Поскольку сначала программа считывает число методом nextInt(), то в остатке будет пустая строка. 
+// !!! Сразу после nextInt() метод nextLine() возвращает остаток предыдущей строки, не использованный при предыдущем считывании.
+// Поскольку сначала программа считывает число методом nextInt(), то в остатке будет пустая строка.
 // Она и будет возвращена при последующем вызове метода nextLine(), а новая строка при этом считана не будет.
 // https://javarush.ru/help/60447
 // Вычитывать надо так
@@ -282,9 +291,9 @@ class MySolution {
         System.out.println();
     }
 }
-		
+
 // Вычитывает слова и показывает их количество
-import java.util.Scanner; 
+import java.util.Scanner;
 class MySolution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -307,21 +316,21 @@ class MySolution {
 		q
 		Вы ввели значений - 9
 		*/
-		
-Для конструкции вида 
+
+Для конструкции вида
         while(sc.hasNext()){
 
 Но в IDE вываливается в бесконечный цикл. Чтобы его прервать использовать Ctrl+D
-	
-	
+
+
 // -------------------------------------------------------
-// Числа 
+// Числа
 	int foo = 1;
 	int bar = 10 % 2; // (0) остаток от деления
 	int zoo = foo * bar;
 	int zip = foo / 3;
-/*	
-Если умножение и деление производятся с данными целочисленного типа. то и результат будет целочисленным, а в случае работы с числами с плавающей точкой (float или double) - результат также будет числом с плавающей точкой. 
+/*
+Если умножение и деление производятся с данными целочисленного типа. то и результат будет целочисленным, а в случае работы с числами с плавающей точкой (float или double) - результат также будет числом с плавающей точкой.
 В том случае, если одно из чисел будет целочисленного типа, а второе - числом с плавающей точкой, то результат также будет числом с плавающей точкой. Это особенно важно в случае деления:
 - если мы делим одно число типа int на другое, также типа int, то это будет целочисленное деление. К примеру, если разделить 15 на 4, результатом будет 3.
 - если одно или оба числа имеют тип float или double, то результатом будет число с плавающей точкой:
@@ -342,34 +351,34 @@ class MySolution {
 	x *= y;    // То же самое, что и x = x * y;
 	x /= y;    // То же самое, что и x = x / y;
 	x %= y;    // То же самое, что и x = x % y;
-	
+
 	// Операторы инкримента
 	int test = 5;
 	++test; // test == 6
 	int test = 5;
 	--test; // test == 4
-	
+
 	// Существуют две формы использования инкремента (декремента) - префиксная и постфиксная.
-	// В префиксной форме оператор появляется перед операндом, в то время как в постфиксной форме оператор появляется после операнда. 
+	// В префиксной форме оператор появляется перед операндом, в то время как в постфиксной форме оператор появляется после операнда.
 	// Давайте разберёмся, как работают эти две формы.
 	int x = 50;
 	int y = ++x; // x == 51, y == 51
 	int x = 50;
 	int y = x++; // x == 51, y == 50
-	
+
 	// Побитовые операции
 	int neg = ~a;  	  // byte NOT инверсия битов
 	int val = a & b;  // byte AND
 	int val = a | b;  // byte OR
 	int val = a ^ b;  // byte XOR
 	int val = a >> b;  // byte сдвиги
-	int val = a >>> b;  // byte 
+	int val = a >>> b;  // byte
 	int val = a << b;  // byte
 	// короче
 	a &= b; // a = a & b;
 	a >>>= b; // a = a >>> b;
 	a <<= b; // a = a << b;
-	
+
 // Приоритеты операторов
 /*
 постфиксные: expr++ expr--
@@ -392,44 +401,44 @@ class MySolution {
 	z = Math.pow(5, 2);	// 25.0 - Возведение в степень
 	z = Math.exp(2);	// E в степени (число Эйлера -  2,71828...) https://ru.wikipedia.org/wiki/E_(%D1%87%D0%B8%D1%81%D0%BB%D0%BE)
 	A = Math.round(25.364789);    // 25
-	
+
 
 	Math.E    // 2.7182818284...
 	Math.PI   // 3.1415926535...
-		
+
 	Math.sin(x) - возвращает синус угла, равного х радиан.
 	Math.cos(x) - возвращает косинус угла, равного х радиан.
 	Math.tan(x) - возвращает тангенс угла, равного х радиан.
 	Math.toDegrees(x) - переводит угол из радиан в градусы.
 	Math.toRadians(x) - переводит угол из градусов в радианы.
-	
+
 	Math.ceil(25.364789));    // 26.0  - // округляет  до ближайшего большего целого +бесконечность
 	Math.ceil(-25.364789));    // -25.0
 	Math.floor(25.364789));    	// 25.0
 	Math.floor(-25.364789));    	// 26.0
-	
+
 	// Округление (способ имеет низкую точность из-за погрешностей хранения в памяти компьютера чисел типа double)
 	double x = 25.364789;
 	int n = 3;     // количество знаков после запятой
 	double scale = Math.pow(10, n);
 	System.out.println(Math.round(x * scale) / scale);    // 25.365
-	
+
 	// Подрезка
 	double x = 25.364789;
 	String formatted = String.format("%.3f", x);
 	System.out.println(formatted);    // 25.365
-	
+
 	// Сравнение вещ. чисел
 	// 0.1 + 0.1 x9 <> 1 - Нужно сравнить разность чисел с какой-то маленькой дельтов
     return Math.abs((a + b) - c) < 1E-4; // 0,0001
 
-	
+
 // -------------------------------------------------------
-// BigInteger / Short 
+// BigInteger / Short
 
 	BigInteger bigValue = BigInteger.valueOf(123);
 	Short shortVal = Integer.valueOf(2022).shortValue();
-  
+
 	// Convert int to short in Java
 	//   https://simplesolution.dev/java-convert-int-to-short/
 
@@ -447,10 +456,10 @@ class MySolution {
 	char a = "\n";	// перевод строки
 	char a = "\r";	// возврат каретки
 	char a = "\'"; 	//  '
-	char a = "\\"; 	// "\" 
+	char a = "\\"; 	// "\"
 	char a = "03A9"; 	//  unicode омега
 	// В Джава все литералы хранятся в UTF-16
-	
+
 	System.out.println('a' + 'b'); // 195 // Соединит не два чара а сложит два числа - коды символов
 // -------------------------------------------------------
 // Даты
@@ -463,60 +472,60 @@ class MySolution {
 //   https://stackabuse.com/how-to-get-current-date-and-time-in-java/
 
 	Date dt = Date.valueOf(LocalDate.now());
-	
-	
-	
+
+
+
 	SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
 	Date date = new Date(System.currentTimeMillis());
 	System.out.println(formatter.format(date));
 	// 2020-02-05 at 10:11:33 UTC
-	
+
 	Date date = new Date(); // This object contains the current date value
-	
+
 	// We can format this date easily:
 	SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 	System.out.println(formatter.format(date));
 	// And running this piece of code would yield:
 	// 05-02-2020 10:12:46
-	
+
 	// Getting the current date and time is really easy using a calendar:
 	Calendar calendar = Calendar.getInstance(); // Returns instance with current date and time set
 	// Again, we can easily format this:
 	SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 	System.out.println(formatter.format(calendar.getTime()));
-	
+
 	LocalDate date = LocalDate.now(); // Gets the current date
 	// This time around, instead of initializing a new object, we're calling the static method now() which returns the current date according to the system clock, with the default time-zone.
 	// We can format this object:
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	System.out.println(date.format(formatter));
-	
-	
-	// 
-	import java.sql.Date;  
-	import java.time.LocalDate;  
-	  
-	public class JavaSQLDateValueOfExample_1 {  
-		public static void main(String [] args)  
-		{  
-			long ctm=System.currentTimeMillis();  
-				Date d= new Date(ctm);  
-				LocalDate localDate = d.toLocalDate();  
-				System.out.println("Value of Local Date: "+localDate);  
-				Date sqldate = Date.valueOf(localDate);  
-				System.out.println("Value of SQL Date: "+sqldate);  
-				}  
-	}  
-	
+
+
+	//
+	import java.sql.Date;
+	import java.time.LocalDate;
+
+	public class JavaSQLDateValueOfExample_1 {
+		public static void main(String [] args)
+		{
+			long ctm=System.currentTimeMillis();
+				Date d= new Date(ctm);
+				LocalDate localDate = d.toLocalDate();
+				System.out.println("Value of Local Date: "+localDate);
+				Date sqldate = Date.valueOf(localDate);
+				System.out.println("Value of SQL Date: "+sqldate);
+				}
+	}
+
 // other
 
-	// Create an instance of SimpleDateFormat used for formatting 
+	// Create an instance of SimpleDateFormat used for formatting
 	// the string representation of date (month/day/year)
 	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
 	// Get the date today using Calendar object.
-	Date today = Calendar.getInstance().getTime();        
-	// Using DateFormat format method we can create a string 
+	Date today = Calendar.getInstance().getTime();
+	// Using DateFormat format method we can create a string
 	// representation of a date with the defined format.
 	String reportDate = df.format(today);
 
@@ -524,7 +533,7 @@ class MySolution {
 	System.out.println("Report Date: " + reportDate);
 
 // -------------------------------------------------------
-// Строки 
+// Строки
 
 // Это ссылочный тип
 
@@ -532,7 +541,7 @@ class MySolution {
 //   https://javarush.ru/groups/posts/equals-java-sravnenie-strok
 
 // Строка в Java является неизменяемым типом. То есть, чтобы изменить переменную типа String, нужно создать новый объект, а старый при этом уничтожается. Для работы со строками, которые всё же нужно менять, существуют дополнительные классы, такие, как StringBuilder. Такое видимое неудобство компенсируется повышением скорости обработки тех строк, которые не нужно менять.
-// Количество символов в строке называется её длиной. Индексация (нумерация) начинается с 0. 
+// Количество символов в строке называется её длиной. Индексация (нумерация) начинается с 0.
 
 	String abc = "aaaa" + "123";
 	String abc = "aa\"aa";
@@ -540,8 +549,8 @@ class MySolution {
 	// \n - Новая строка
 
 	String name;
-	name = "Ivan";	
-	
+	name = "Ivan";
+
 // Конкантенация
 	int x = 10, y = 15;
 	System.out.println(x + 1 + " не равно " + y);   //11 не равно 15
@@ -552,19 +561,19 @@ class MySolution {
 // Функции строк
 	String word = "Java is strong";
 	int x = word.length(); //14 Длинна
-	
+
 	String word = "abracadabra"; // Получение индекса элемента в строке.
 	int x = word.indexOf('b'); // 1
-	
+
 	char letter_0 = word.charAt(0); // Получение элемента строки по его индексу.
 	System.out.println(letter_0); // a
-	
-	// СРАВНЕНИЕ СТРОК 
+
+	// СРАВНЕНИЕ СТРОК
 	// if (str == "123") Не будет работать!!!!
 	String str = "asd";
 	if (str.equals("123")) ...
 	if (str.equalsIgnoreCase("asdфыв")) ...
-	
+
 	// Подстроки
 	String str = "Добро пожаловать в мир Java!";
 	System.out.println(str.substring(6));         //пожаловать в мир Java!
@@ -574,7 +583,7 @@ class MySolution {
 	// Регистры
 	System.out.println(s.toLowerCase()); // i'll be back
 	System.out.println(s.toUpperCase()); // I'LL BE BACK
-	
+
 	// На пустоту - isEmpty
 	String str1 = "Hubba Bubba";
 	String str2 = "   ";
@@ -582,13 +591,13 @@ class MySolution {
 	boolean value1 = str1.isEmpty(); // false
 	boolean value2 = str2.isEmpty(); // false
 	boolean value3 = str3.isEmpty(); // true
-	
+
 	// Проверка на содержание
 	String str1 = "One Two Three";
 	String str2 = "Two";
 	boolean value1 = str1.contains(str2); // true
-	
-	
+
+
 	// Преобразование в строку
 	// #1
 	int num = 12345;                      // Это число типа int
@@ -596,78 +605,78 @@ class MySolution {
 	System.out.println(str1);           // 12345
 	// #2
 	String str = String.valueOf(num); // Преобразование числа в строку
-	
+
 	// Java String to Int – How to Convert a String to an Integer
 	//   https://www.freecodecamp.org/news/java-string-to-int-how-to-convert-a-string-to-an-integer/
 	// Check If a String Is Numeric in Java
 	//   https://www.baeldung.com/java-check-string-number
-	
+
 	// Преобразование строки в число.
 	String str = "12345";
 	Integer num = Integer.valueOf(str);  // 12345 num - объект класса Integer
 	// #2
 	int    num = Integer.parseInt(str);      //num - переменная типа int
 	double dbl = Double.parseDouble(str);    //dbl - переменная типа double
-	
-	
-	
+
+
+
     // Форматирование строк
 	System.out.format("%02d:%02d:%02d",1,2,3);  			// 01:02:03
 	String str = String.format("%02d:%02d:%02d",1,2,3);		// 01:02:03
 	// в форматтер передается число из двух цифр, а если цифра одна, то спереди дописывается ноль
-	
+
 	String formatted = String.format("%.3f", x); // 25.365 подрезка
-	
+
 	%f - число с плавающей точкой
 	%s
 	%d
-	
-		
+
+
 	System.out.format("%s, ваш возраст %d лет.","Владимир", 40); 	// Владимир, ваш возраст 40 лет.
 	// # 3
 	System.out.printf("%s %s",-(b/a),c/a);
-	
+
 	// ОБРАБОТКА NULL
 	// Используйте Java 8 Optional (фильтр не требуется):
 	//   https://coderoad.ru/31412294/Java-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D0%BD%D0%B5-Null-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B9-%D0%B5%D1%89%D0%B5-%D0%BF%D1%80%D0%B8%D1%81%D0%B2%D0%BE%D0%B8%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E
-	
+
 	String str = Optional.ofNullable(someString).orElse("default");
 	String str = Optional.ofNullable(System.getProperty("property")).orElse(defaultValue);
 }
-	
+
 // -------------------------------------------------------
-// Перечисления (enum) 
+// Перечисления (enum)
 // ссылочный тип
 
 
 // Java для начинающих. Урок 48: Enum (Перечисления).
 //   https://www.youtube.com/watch?v=GOzNp1YAm5w&ab_channel=alishev
 
-	public enum DayOfWeek { 
+	public enum DayOfWeek {
 	//  public static final - эквивалентно
 		MONDAY, TUESDAY, ..., SUNDAY;
-		
+
 		int aaa; // Поля ссылочного типа
-		
+
 		// методы перечисления
 		int getDay() {
 			return ...
 		}
 		// Тут можно сделать конструктор
 	}
-	
+
 	// Доступны методы
 	DayOfWeek.values()  // массив возможных значений
 	DayOfWeek.name()	// -> "MONDAY" - как в исходном коде
 	DayOfWeek.ordinal()	// -> 0 порядковый номер элемента
-	
+
 	// Базовым типом enum может быть только int
-	
-	
+
+
 // -------------------------------------------------------
 // Условия
 	// == - =
-	// != - NOT = 
+	// != - NOT =
 	// && - AND сокращенная схема (если левая половина false - то вторую половину не вычисляют)
 	// || - OR  сокращенная схема
 	// &  - AND полная схема
@@ -678,21 +687,21 @@ class MySolution {
 	// ^=
 	boolean foo &= bar
 	boolean foo = foo & bar // полная схема вычислений
-	
+
 // Порядок условий
-// Обработка логических выражений производится в соответствии с законами математической (булевой) логики. 
+// Обработка логических выражений производится в соответствии с законами математической (булевой) логики.
 // 1. Сначала выполняются действия в круглых скобках.
 // 2. Затем выполняются операции логического отрицания (!)
 // 3. Далее выполняются операции логического И (&&)
 // 4. В последнюю очередь выполняются операции логического ИЛИ (||).
 
-	
+
 	if (a == 3) {
 		System.out.println("A is 3");
-	} else {	
+	} else {
 		System.out.println("A is not 3");
 	}
-	
+
 // SWITCH
 // Оператор switch является чувствительным к регистру.
 // В switch используется метод String.equals() для сравнивания переданного на вход значения с существующими значениями.
@@ -702,7 +711,7 @@ class MySolution {
 
 	// Тернарное сравнение
 	System.out.println((a == 3) ? "A is 3" : "A is not 3");
-	
+
 	switch (выражение) {
 		case  value1:
 			//Группа команд
@@ -710,13 +719,13 @@ class MySolution {
 		case value2 :
 			//Группа команд
 			break; // Если не добавить - выполнится и блок default
-		
+
 		... //Можно вставить столько проверяемых значений, сколько нужно
 
 		default: //Необязательно
 		   //Группа команд, исполняемая, если значение выражения не рано ни одному из случаев
 	}
-		
+
 	// Пример
 	int n = 10;
 	switch (n) {
@@ -729,14 +738,14 @@ class MySolution {
 			break; // !!! Если не добавить - выполнится и блок 20 default
 		case 20 :
 			System.out.println("20");
-		default: 
+		default:
 			System.out.println("default");
 	}
 	/*
 	10
 	15 !!!!!!
 	*/
-	
+
 // -------------------------------------------------------
 // Цикл
 
@@ -745,16 +754,16 @@ class MySolution {
 	for (int i = 0; i < 10; i++) {
 		System.out.println(i);
 	}
-	
-	int i 		// Инициализация: действие, которое выполняется только один раз в начале работы цикла. 
+
+	int i 		// Инициализация: действие, которое выполняется только один раз в начале работы цикла.
 				// Обычно здесь задаётся внутренняя переменная, которая служит счётчиком количества повторений.
 	break; 		// немедленно прерывает работу цикла (исполнение программы переходит к командам, расположенным после цикла)
 	continue;	// завершает текущую итерацию (цикл переходит к исполнению следующей итерации)
-	
+
 	for (int i = 5; i < 10; i += 2) {
 	for (int i = 5; i > -1; i--) {
 	for (int i = 1; i < 10;) { // Бесконечный цикл
-	
+
 	// Метки для циклов
 	outer:
 	for (int i = 5; i < 10; i += 2) {
@@ -762,21 +771,21 @@ class MySolution {
 			break outer; // разорвать внешний цикл
 		}
 	}
-			
+
 	// while
 	int x = 3;
 	while (x > 0) {
 		System.out.println(x);
 		x--;
 	}
-	
+
 	// do while
 	int x = 1;
 	do {
 		System.out.println(x);
 		x++;
 	} while (x < 5);
-		
+
 // -------------------------------------------------------
 // Массивы
 
@@ -797,22 +806,22 @@ class MySolution {
 	String[] 	seasons  = {"Winter", "Spring", "Summer", "Autumn"}; // оператор new можно опустить
 	String[] 	names = {"A", "B", "C", "D"};
 	String 		names[] = {"A", "B", "C", "D"}; // Также возможна инициализация массива записью квадратных скобок после имени массива, однако такой способ используется гораздо реже.
-	
+
 	arrayNum[0] = 150;
 	arrayStr[5] = "abc";
 	int a = arrayFoo.length;  // length у массива - это не метод, а атрибут, т. е. свойство данного массива, поэтому вызывается без круглых скобок в конце.
-	
-	// При объявлении массива без указания значений элементов он будет заполнен значениями по умолчанию. 
+
+	// При объявлении массива без указания значений элементов он будет заполнен значениями по умолчанию.
 	// Для int это 0, для float и double — 0.0, для char — \0, для boolean — false, а для String и любого другого класса это null.
-	
-	
+
+
 	// перебор
 	String[] numbers = {"one", "two", "three", "four", "five", "forty two"};
 	for (int i=0; i < numbers.length; i++) {
 		if (numbers[i].charAt(0) == 'f') {
 			System.out.println(numbers[i]);
 		}
-	} 
+	}
 	// перебор - enhanced loop
 	// Важное отличие заключается в том, что в первом варианте мы работаем непосредственно со значениями элементов массива, а во втором - с их копиями:
 	String[] numbers = {"one", "two", "three", "four", "five", "forty two"};
@@ -822,11 +831,11 @@ class MySolution {
 			System.out.println(s);
 			s = "deleted";
 		}
-	} 
-	System.out.println(numbers1[3]);    // four 
+	}
+	System.out.println(numbers1[3]);    // four
 
 	// Формирование массива через split
-	// При разрезании получается массив именно из элементов типа String. 
+	// При разрезании получается массив именно из элементов типа String.
 	// Попытка разрезать строку вида "123 16 456 852" и записать элементы в массив типа int вызовет ошибку.
 	String str = "I'll be back";
 	String[] words = str.split(" ");
@@ -836,38 +845,38 @@ class MySolution {
 	//  I'll	/ be	/ back
 
 // Класс Arrays
-	
+
 	// toString
-	int[] array = {1, 2, 3, 4, 5}; 
+	int[] array = {1, 2, 3, 4, 5};
 	System.out.println(Arrays.toString(array));       // [1, 2, 3, 4, 5]
-	
+
 	// sort()
 	int[] array = {5, 10, 15, 4, 1};
 	Arrays.sort(array); 	// [1, 4, 5, 10, 15]
 	Arrays.sort(array, 3, 7); //  только элементы массива с индексами от 3 до 6 (правая граница не входит в отрезок сортировки).
-	
+
 	String[] array = {"one", "two", "three", "four"};
-	Arrays.sort(array);            // сортировка производится в лексикографическом порядке.  
+	Arrays.sort(array);            // сортировка производится в лексикографическом порядке.
 	System.out.println(Arrays.toString(array));    // [four, one, three, two]
-	
+
 	// equals()
 	int[] numbers1 = {1, 2, 3};
-	int[] numbers2 = {1, 2, 3};	
+	int[] numbers2 = {1, 2, 3};
 	System.out.println(Arrays.equals(numbers1, numbers2));    // true
-	
+
 	// deepEquals
     System.out.println(Arrays.deepEquals(arrayFirst, arraySecond));
-	
+
 	// copyOf()
 	int[] numbers1 = {1, 2, 3, 4, 5};
 	int[] numbers3 = Arrays.copyOf(numbers1, 3);    // [1, 2, 3]
-	
+
 	// copyOfRange()
 	int[] numbers1 = {2, 4, 6, 8, 10, 12, 14, 16};
 	int [] numbers2 = Arrays.copyOfRange(numbers1, 2, 5);
 	System.out.println(Arrays.toString(numbers2));    // [6, 8, 10]
 
-	
+
 	// ----------
 	// Сравнение многомерных массивов по содержанию
 	int[][]arrayFirst = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
@@ -885,7 +894,7 @@ class MySolution {
 	Arrays.sort(sortArr); // Сортировка эдементов
 	System.out.println(Arrays.toString(sortArr));
 	System.out.println((Arrays.binarySearch(sortArr, element) < 0 ? false : true)); // Бинарный поиск
-	
+
 	// ----------
 	// Многомерный массив
 	int[][] sample = {{1, 2, 3}, {4, 5, 6}};
@@ -894,11 +903,11 @@ class MySolution {
 
 	System.out.println(Arrays.deepToString(strings)); // Вывод многомерного массива
 	System.out.println(Arrays.deepToString(ints));
-	
+
 	// Элементы многомерного массива могут быть разной длины:
 	int[][] myArr = {{1, 2, 3}, {4}, {5, 6, 7, 8}};
 	System.out.println(myArr[1][0]); // 4
-  
+
 
 // -------------------------------------------------------
 // Map - Ассоциативный массив
@@ -916,12 +925,12 @@ class MySolution {
 	https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
 
 	import java.util.*;
-	import java.util.Arrays;	
+	import java.util.Arrays;
 
 // org/stepic/java/HelloWorld.java
 	package org.stepic.java;
 		public class HelloWorld {...}
-		
+
 // Импорты
 	import java.util.*;
 	import java.lang.*; // неявный импорт
@@ -936,64 +945,20 @@ class MySolution {
 	import java.util.regex;
 	import javax.xml;
 	...
-	
+
 	com.oracle // прикладные пакеты JRE. Не использовать/ непереносимые, только JRE от Oracle
 	com.sun
 
-// импорт статических методов. 
+// импорт статических методов.
 // После может быть вызван без префикса sqrt(4); / out.println("foo");
 	import static java.lang.Math.sqrt;
 	import static java.lang.System.out;
-	import static java.lang.Math.*; // импорт всех полей и методов из класса 
+	import static java.lang.Math.*; // импорт всех полей и методов из класса
 
 // Название пользовательского класса
 org.vladshestakov.HomeLibary
 
-	
--------------------------------------------------------
-// Объявления класса
 
-public final class Integer {
-	// final - от класса нельзя наследоваться
-	private final  int value; // Поле (свойство) класса
-	// final - присвоить свойство можно только один раз
-	
-	// Конструктор
-	public Integer (int value) {
-		this.value = value;
-		// this - (опционально) доступ к полю класса, 
-		// чтобы исключить использование переменной с тем же именем
-	}
-	
-	// Пример запрета конструктора - private
-	private Integer() {}
-	
-	// Деструкторов нет, разработчики делают сами себе метод close
-	public close() {}
-	
-}
-
-	public static void main() {}
-	// static - метод может вызываться без создания экземпляра класса
-	// видит только другие статические объекты
-	
-	// Константы
-	public static final String DEFAULT_DELIMITER = ", "; // Разделитель даных по-умолчанию
-    public static final String DEFAULT_QUOTE = "'"; // Кавычка строк по-умолчанию
-
-
-	// Перегрузка
-	// (необязательный) Override - Проверка компилятором на верность наследования
-	@Override
-	public class SomeClass(char c) extends AbstractSomeClass {
-		// extends - признак наследования класса	
-		super SomeClass('a'); // Вызов конструктора родительского класса
-	}
-	// Если extends опущен подразумевается extends Object
-	
-	if (myObject instanceof Object) {} //Проверка на принадлежность объекта к классу
-	
-	
 // -------------------------------------------------------
 // Модификаторы доступа
 	private		объект виден только внутри себя
@@ -1007,36 +972,79 @@ public final class Integer {
 	void		Отсутствие значения
 	throws		Список объектов типа Exception
 
+-------------------------------------------------------
+// Объявления класса
+
+public final class Integer {
+	// final - от класса нельзя наследоваться
+	private final  int value; // Поле (свойство) класса
+	// final - присвоить свойство можно только один раз
+
+	// Конструктор
+	public Integer (int value) {
+		this.value = value;
+		// this - (опционально) доступ к полю класса,
+		// чтобы исключить использование переменной с тем же именем
+	}
+
+	// Пример запрета конструктора - private
+	private Integer() {}
+
+	// Деструкторов нет, разработчики делают сами себе метод close
+	public close() {}
+
+}
+
+	public static void main() {}
+	// static - метод может вызываться без создания экземпляра класса
+	// видит только другие статические объекты
+
+	// Константы
+	public static final String DEFAULT_DELIMITER = ", "; // Разделитель даных по-умолчанию
+    public static final String DEFAULT_QUOTE = "'"; // Кавычка строк по-умолчанию
+
+
+	// Перегрузка
+	// (необязательный) Override - Проверка компилятором на верность наследования
+	@Override
+	public class SomeClass(char c) extends AbstractSomeClass {
+		// extends - признак наследования класса
+		super SomeClass('a'); // Вызов конструктора родительского класса
+	}
+	// Если extends опущен подразумевается extends Object
+
+	if (myObject instanceof Object) {} //Проверка на принадлежность объекта к классу
+
+
 
 // -------------------------------------------------------
 // Методы пакета
+
 	// Главный метод класса
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-		// Если неудачный запуск 
+		// Если неудачный запуск
 		System.exit(-1); // -1 - код ошибки
-	} 
-	
-    	
+	}
+
+
 	// Процедура
     public static void ShowStr(String text){
         System.out.println(text);
 		// return; // немедленный выход
     }
-	
+
 	// Функция
     public static int PromptInt(String prompt) {
         Scanner console = new Scanner(System.in);
         System.out.print(prompt);
         return console.nextInt(); // Выход и возврат значения
     }
-	
+
 	// Функция с обработкой исключений
-	static void loadProperties(Properties p)throws IOException {} 
-	
-	
-	
-	
+	static void loadProperties(Properties p)throws IOException {}
+
+
 // -------------------------------------------------------
 // Исключения
     static void loadProperties(Properties p)throws IOException { // Функция с обработкой исключений
@@ -1048,7 +1056,7 @@ public final class Integer {
         }
         System.out.println("accounts - " + Arrays.deepToString(accounts));
 	}
-	
+
 // How to rethrow an exception in Java?
 //   https://www.tutorialspoint.com/how-to-rethrow-an-exception-in-java
 
@@ -1058,23 +1066,23 @@ public final class Integer {
 			...
 			throw ex; // rethrow
 		}
-	
+
 // -------------------------------------------------------
-// Порядок нициализации классов
+// Порядок инциализации классов
 
 // Любой блок инициализации, присутствующий в классе, выполняется перед конструктором.
 // Вызов метода Java без имени
 //   https://coderoad.ru/13699075/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0-Java-%D0%B1%D0%B5%D0%B7-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8
 
 	public class Sequence {
-		
+
 		// Конструктор для класса, выполняется третьим.
 		Sequence() {
 			System.out.print("c ");
 		}
 
 		// Initializer block - Блок инициализации класса, общий для всех объектов(конструкторов) класса
-		//   В классе может быть несколько блоков инициализации, 
+		//   В классе может быть несколько блоков инициализации,
 		//   и в этом случае они выполняются в той последовательности, в которой они появляются в классе.
 		//   non-static будет вызываться каждый раз, когда вы создаете новый экземпляр,
 		//   и он будет вызываться непосредственно перед конструктором.
@@ -1097,7 +1105,7 @@ public final class Integer {
 			System.out.print("x ");
 		}
 	}
-	
+
 	// Выполнит - x y c g
 
 // -------------------------------------------------------
@@ -1110,8 +1118,8 @@ public final class Integer {
 	public static boolean isJavaLetter(char c) {}
 	// метод устарел и не рекомендуется, будет Warning компилятора
 	// в javadoc предлагается замена
-	
-	// SuppressWarnings 
+
+	// SuppressWarnings
 	@SuppressWarnings("unchecked")
 	public static final Class<Character> TYPE ...
 	// Временно отключает предупреждения компилятора
@@ -1120,24 +1128,24 @@ public final class Integer {
 	//   https://java2blog.com/uses-unchecked-or-unsafe-operations-recompile-with-xlintunchecked-for-details/
 	// What causes javac to issue the "uses unchecked or unsafe operations" warning
 	//   https://stackoverflow.com/questions/197986/what-causes-javac-to-issue-the-uses-unchecked-or-unsafe-operations-warning
-	
-	
+
+
 	// Объявленные аннотации
 	public @interface SuppressWarnings {
 		String[] value();
 	}
-	
+
 	@Override
 	public boolean SomeClass(char c) extends AbstractSomeClass {}
 	// extends - признак наследования класса
 	// (необязательный) Override - Проверка компилятором на верность наследования
-	
-	
+
+
 // -------------------------------------------------------
 // Maven
 
 // Переходим на Maven
-//   Источник <https://java-course.ru/begin/maven_first/> 
+//   Источник <https://java-course.ru/begin/maven_first/>
 
 // Maven и java
 //   https://java-master.com/maven-%d0%b8-java/
@@ -1145,10 +1153,13 @@ public final class Integer {
 // -------------------------------------------------------
 // Java DATABASE / JDBC
 
+// JDBC (англ. Java DataBase Connectivity — соединение с базами данных на Java) — платформенно независимый промышленный стандарт взаимодействия Java-приложений с различными СУБД, реализованный в виде пакета java.sql, входящего в состав Java SE.
+
+
 // Руководство Java JDBC
 // https://betacode.net/10167/java-jdbc
 
-// Oracle JDBC Download 
+// Oracle JDBC Download
 //   https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
 
 // SQL Injection Prevention Cheat Sheet
@@ -1166,37 +1177,53 @@ public final class Integer {
 
 
 // -------------------------------------------------------
-// HIBERNATE
-// Hibernate одна из самых популярных открытых реализаций последней версии спецификации (JPA 2.1)
-// Самый популярный ORM (Object Relational Mapping) фреймворк / библиотека для языка программирования Java, 
-//   предназначенная для решения задач объектно-реляционного отображения (ORM), 
-//   самая популярная реализация спецификации JPA
-//   https://ru.wikipedia.org/wiki/Hibernate_(%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0)
-// 	 https://www.hibernate.org
-//   HIBERNATE 5.5.6 (4 августа 2021)
+// Java EE — это платформа, построенная на основе Java SE, которая предоставляет API и среду времени выполнения для разработки и запуска крупномасштабных, многоуровневых, масштабируемых, надежных и безопасных сетевых приложений.
 
-// JPA (Java Persistence API) это спецификация Java EE и Java SE, описывающая систему управления 
+// JPA (Java Persistence API) это спецификация Java EE и Java SE, описывающая систему управления
 // сохранением java объектов в таблицы реляционных баз данных в удобном виде.
 //   https://ru.wikipedia.org/wiki/Java_Persistence_API
 
 // JDO - Java Data Objects (JDO)
 //   JPA (Java Persistence API) и Java Data Objects (JDO) две спецификации сохранения java объектов в базах данных.
-//   Если JPA сконцентрирована только на реляционных базах, то JDO более общая спецификация которая описывает ORM 
+//   Если JPA сконцентрирована только на реляционных базах, то JDO более общая спецификация которая описывает ORM
 //   для любых возможных баз и хранилищ.
 
-// ORM (англ. Object-Relational Mapping, рус. объектно-реляционное отображение, или преобразование) 
-//   — технология программирования, которая связывает базы данных с концепциями объектно-ориентированных 
+// ORM (англ. Object-Relational Mapping, рус. объектно-реляционное отображение, или преобразование)
+//   — технология программирования, которая связывает базы данных с концепциями объектно-ориентированных
 //   языков программирования, создавая «виртуальную объектную базу данных
 //   https://ru.wikipedia.org/wiki/ORM
 
 // POJO (англ. Plain Old Java Object) — «старый добрый Java-объект», простой Java-объект
-//   https://ru.wikipedia.org/wiki/POJO 
+//   https://ru.wikipedia.org/wiki/POJO
 
-// DAO - Data Access Object
+// DAO - Data Access Object / абстрактный интерфейс к какому-либо типу базы данных или механизму хранения.
 //   https://ru.wikipedia.org/wiki/Data_Access_Object
+
+// -------------------------------------------------------
+// MICROSERVICES
+
+// REST (от англ. Representational State Transfer — «передача репрезентативного состояния» или «передача „самоописываемого“ состояния») — архитектурный стиль
+	// Другими словами, REST — это набор правил того, как программисту организовать написание кода серверного приложения, чтобы все системы легко обменивались данными и приложение можно было масштабировать.
+	// В сети Интернет вызов удалённой процедуры может представлять собой обычный HTTP-запрос (обычно GET или POST; такой запрос называют «REST-запрос»), а необходимые данные передаются в качестве параметров запроса
+
+// SOAP (от англ. Simple Object Access Protocol — простой протокол доступа к объектам) — протокол обмена структурированными сообщениями в распределённой вычислительной среде.
+
+// Различия REST и SOAP
+//   https://habr.com/ru/post/483204/
 
 // CRUD -  акроним, обозначающий четыре базовые функции, используемые при работе с базами данных[1]: создание (англ. create), чтение (read), модификация (update), удаление (delete).
 //   https://ru.wikipedia.org/wiki/CRUD
+
+// -------------------------------------------------------
+// HIBERNATE
+// Hibernate одна из самых популярных открытых реализаций последней версии спецификации (JPA 2.1)
+// Самый популярный ORM (Object Relational Mapping) фреймворк / библиотека для языка программирования Java,
+//   предназначенная для решения задач объектно-реляционного отображения (ORM),
+//   самая популярная реализация спецификации JPA
+//   https://ru.wikipedia.org/wiki/Hibernate_(%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0)
+// 	 https://www.hibernate.org
+//   HIBERNATE 5.5.6 (4 августа 2021)
+
 
 // **** Разница между JDBC, JPA, Hibernate, Spring Data JPA
 //   https://java-master.com/%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-jdbc-jpa-hibernate-spring-data-jpa/
@@ -1208,7 +1235,7 @@ public final class Integer {
 // JPQL (Java Persistence query language)
 //   это язык запросов, практически такой же как SQL, однако вместо имен и колонок таблиц базы данных, он использует имена классов Entity и их атрибуты
 
-// Criteria API это тоже язык запросов, аналогичным JPQL (Java Persistence query language), 
+// Criteria API это тоже язык запросов, аналогичным JPQL (Java Persistence query language),
 //   однако запросы основаны на методах и объектах
 
 
@@ -1223,32 +1250,32 @@ public final class Integer {
 
 
 // Руководства Java Hibernate (Каталог статей Betacode)
-//   Источник <https://betacode.net/10969/hibernate> 
+//   Источник <https://betacode.net/10969/hibernate>
 
 // Руководство Java Hibernate для начинающих
 //   https://betacode.net/10201/java-hibernate
 
 // Запрос Java Hibernate (подробности для видов БД)
-//   Источник <https://betacode.net/10225/java-hibernate-reference> 
+//   Источник <https://betacode.net/10225/java-hibernate-reference>
 
 // How to make Hibernate work with Oracle database (only adaptation mechanic)
-//   Источник <https://www.codejava.net/frameworks/hibernate/how-to-make-hibernate-work-with-oracle-database> 
+//   Источник <https://www.codejava.net/frameworks/hibernate/how-to-make-hibernate-work-with-oracle-database>
 
 // Hibernate для самых маленьких и не только (2011)
-//   Источник <https://habr.com/ru/post/132385/> 
+//   Источник <https://habr.com/ru/post/132385/>
 
 // Документация разработчика Hibernate – Глава I. Доступ к базе данных [** RTFM **]
-//   Источник <https://habr.com/ru/post/301384/> 
+//   Источник <https://habr.com/ru/post/301384/>
 
 // Документация разработчика Hibernate – Глава II. Транзакции и контроль многопоточности
-//   Источник <https://habr.com/ru/post/269485/> 
+//   Источник <https://habr.com/ru/post/269485/>
 
 // Знакомство с Maven, Spring, MySQL, Hibernate и первое CRUD приложение (часть 1)
-//   Источник <https://javarush.ru/groups/posts/2253-znakomstvo-s-maven-spring-mysql-hibernate-i-pervoe-crud-prilozhenie-chastjh-1> 
+//   Источник <https://javarush.ru/groups/posts/2253-znakomstvo-s-maven-spring-mysql-hibernate-i-pervoe-crud-prilozhenie-chastjh-1>
 
-// Java Transaction API (JTA) 
-//   API, для поддержки транзакций, входящее в стандарт серверной платформы для языка программирования Java – 
-//   Jakarta EE. Определяет взаимодействие между менеджером транзакций и другими участниками распределённой 
+// Java Transaction API (JTA)
+//   API, для поддержки транзакций, входящее в стандарт серверной платформы для языка программирования Java –
+//   Jakarta EE. Определяет взаимодействие между менеджером транзакций и другими участниками распределённой
 //   транзакционной системы.
 
 // HibernateSearch [?]
@@ -1260,7 +1287,7 @@ public final class Integer {
 // ***** Руководство по Hibernate
 //   https://proselyte.net/tutorials/hibernate-tutorial/
 // Руководство по Hibernate. Архитектура.
-//   Источник <https://proselyte.net/tutorials/hibernate-tutorial/architecture/> 
+//   Источник <https://proselyte.net/tutorials/hibernate-tutorial/architecture/>
 // Руководство по HIbernate. Язык запросов Hibernate (HQL)
 //   https://proselyte.net/tutorials/hibernate-tutorial/hibernate-query-language/
 // Руководство по HIbernate. Criteria Queries
@@ -1281,7 +1308,7 @@ public final class Integer {
 // ***** Почему следует избегать использования JPA/Hibernate в продакшене (костыли JPA / альтернативы / здраво)
 //   https://habr.com/ru/post/551902/
 
-// FetchType LAZY и EAGER 
+// FetchType LAZY и EAGER
 //   https://coderoad.ru/2990799/%D0%A0%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-FetchType-LAZY-%D0%B8-EAGER-%D0%B2-Java-Persistence-API
 
 
@@ -1349,14 +1376,14 @@ public final class Integer {
 
 // @MappedSuperclass
 
-// @Service 
+// @Service
 //   ни к чему эта аннотация не обязывает, просто для удобства
 
 // @Convert и @Converts  / Converters for JPA 2.1
 //   задания класса преобразования basic аттрибута Entity в другой тип при сохранении/получении данных их базы (например, работать с аттрибутом Entity boolean типа, но в базу сохранять его как число)
 
-// @EntityListeners 
-//   Callback методы служат для вызова при определенных событиях Entity (то есть добавить обработку 
+// @EntityListeners
+//   Callback методы служат для вызова при определенных событиях Entity (то есть добавить обработку
 //   например удаления Entity методами JPA)
 
 // @OrderBy и @OrderColumn
@@ -1376,7 +1403,7 @@ public final class Integer {
 // -------------------------------------------------------
 // Hibernate / JPA Troubleshooting
 
-// LazyInitializationException 
+// LazyInitializationException
 //   ?
 // HABR [lazy initialization]
 //   https://habr.com/ru/search/?target_type=posts&order=relevance&q=%5Blazy%20initialization%5D
@@ -1402,17 +1429,17 @@ public final class Integer {
 // Hibernate. Конфигурирование
 //   https://proselyte.net/tutorials/hibernate-tutorial/configure/
 
- XML-файл – hibernate.cfg.xml, 
+ XML-файл – hibernate.cfg.xml,
  либо – hibernate.properties.
- 
+
 
 // -------------------------------------------------------
 // SPRING Framework
 //   https://star-wiki.ru/wiki/Spring_Framework
 
-// org.springframework:spring-webmvc:5.3.15	
+// org.springframework:spring-webmvc:5.3.15
 //   https://search.maven.org/artifact/org.springframework/spring-webmvc/5.3.15/jar
- 
+
 // ***** Что нужно знать о Spring: история появления, ключевые модули, сравнение с Java EE
 //   https://javarush.ru/groups/posts/3546-chto-nuzhno-znatjh-o-spring-istorija-pojavlenija-kljuchevihe-moduli-sravnenie-s-java-ee
 
@@ -1424,11 +1451,16 @@ public final class Integer {
 //	SpEL 			— Spring Expression Language — язык выражений Spring;
 
 // Spring Boot
-// see // SPRING BOOT 
+// see // SPRING BOOT
+//  Spring Boot обеспечивает автоматическую настройку для всего подключения к базе. В том числе и пул соединений. 
 
 // Spring Data
 //   Значительно упрощает использование технологий доступа к данным, реляционных и нереляционных баз данных
-// see // SPRING DATA JPA 
+// Цель Spring Data — уменьшить объем стандартного кода, необходимого для реализации уровней доступа к данным для различных баз данных.
+
+// Spring Data JPA 
+// see // SPRING DATA JPA
+// — это библиотека, которая добавляет дополнительный уровень абстракции поверх ORM реализации JPA. По умолчанию Spring Data JPA использует Hibernate, в качестве ORM провайдера (чтобы выполнять запросы). Это, кстати, можно изменить используя настройки Spring. Хотя делать это неопытным пользователям я бы не советовал.
 
 // Spring Cloud
 // Spring Security
@@ -1459,6 +1491,9 @@ public final class Integer {
 // -------------------------------------------------------
 // SPRING MVC
 
+// Spring MVC — основные принципы
+//   https://habr.com/ru/post/336816/
+
 // Spring Data JDBC/R2dbc - Альтернатива JPA (imho - https://habr.com/ru/post/551902/)
 //   https://docs.spring.io/spring-data/jdbc/docs/2.1.7/reference/html/#reference
 
@@ -1488,7 +1523,7 @@ public final class Integer {
 // -------------------------------------------------------
 // Аннотации String MVC
 
-// @Controller 
+// @Controller
 //   Spring поймет что класс обрабатывает HTTP запросы
 //   сообщает Spring MVC, что данный класс является контроллером
 
@@ -1496,31 +1531,31 @@ public final class Integer {
 
 // @GetMapping - Тоже что @RequestMapping(method = RequestMethod.GET)
 
-// @PathVariable. Она указывает на то, что данный параметр (int id) получается из адресной строки. 
-//   Чтобы указать место этого параметра в адресной строке используется конструкция {id} 
-//   (кстати, если имя переменной совпадает, как в данном случае, то в скобках это можно не указывать, 
-//    а написать просто @PathVariable int id). 
+// @PathVariable. Она указывает на то, что данный параметр (int id) получается из адресной строки.
+//   Чтобы указать место этого параметра в адресной строке используется конструкция {id}
+//   (кстати, если имя переменной совпадает, как в данном случае, то в скобках это можно не указывать,
+//    а написать просто @PathVariable int id).
 	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
 	public ModelAndView editPage(@PathVariable("id") int id) {
-		
+
 // @ModelAttribute
 @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public ModelAndView editFilm(@ModelAttribute("film") Film film) {
 // @PostMapping
 
-// @Configuration 
+// @Configuration
 //   говорит Spring-у что класс может содержать описания бинов.
 //   сообщает Spring что данный класс является конфигурационным и содержит определения и зависимости bean-компонентов
 // @Bean - объекты, которые управляются Spring'ом
 
-// @EnableWebMvc 
+// @EnableWebMvc
 //   импортирует базовую настройку spring-mvc (контроллеры, резолверы, хэндлеры всё вот это вот)
 //   позволяет импортировать конфигурацию Spring MVC из класса WebMvcConfigurationSupport
 // @ComponentScan сообщает Spring где искать компоненты, которыми он должен управлять, т.е. классы, помеченные аннотацией
 
-// @Repository 
+// @Repository
 //   класс является репозиторием
-// @Service 
+// @Service
 //   класс является сервисом
 
 // @Autowired
@@ -1528,23 +1563,42 @@ public final class Integer {
 
 	@Service
 	public class LibItemEntityServiceImpl implements LibItemEntityService {
-		
+
 		@Autowired
 		public void setLibItemEntityDao(LibItemEntityDaoImpl libItemEntityDao) {
 			this.libItemEntityDao = libItemEntityDao;
 		}
 		...
 	}
-	
+
 // -------------------------------------------------------
 // Apache iBatis
 //   https://question-it.com/questions/4942552/kak-vypolnit-fajl-stsenarija-sql-na-java
 
-	
+
 // -------------------------------------------------------
-// SPRING BOOT 
-//   Проект, целью которого является упрощение создания приложений на основе Spring. 
+// SPRING BOOT
+//   Проект, целью которого является упрощение создания приложений на основе Spring.
 //   Он позволяет наиболее простым способом создать web-приложение, требуя от разработчиков минимум усилий по его настройке и написанию кода.
+// Spring Boot — это полезный проект, целью которого является упрощение создания приложений на основе Spring. Он позволяет наиболее простым способом создать web-приложение, требуя от разработчиков минимум усилий по его настройке и написанию кода
+
+// Каждый раз, создавая очередное корпоративное Java-приложение на основе Spring, вам необходимо повторять одни и те же рутинные шаги по его настройке:
+
+// В зависимости от типа создаваемого приложения (Spring MVC, Spring JDBC, Spring ORM и т.д.) импортировать необходимые Spring-модули
+// ** Импортировать библиотеку web-контейнеров (в случае web-приложений)
+// ** Импортировать необходимые сторонние библиотеки (например, Hibernate, Jackson), при этом вы должны искать версии, совместимые с указанной версией Spring
+// ** Конфигурировать компоненты DAO, такие, как: источники данных, управление транзакциями и т.д.
+// ** Конфигурировать компоненты web-слоя, такие, как: диспетчер ресурсов, view resolver
+// ** Определить класс, который загрузит все необходимые конфигурации
+
+//  spring-boot-starter-data-jpa 
+// Spring Data JPA для доступа к базе данных, просто включите в свой проект зависимость spring-boot-starter-data-jpa и все будет готово (вам не придется искать совместимые драйверы баз данных и библиотеки Hibernate)
+
+// spring-boot-starter-web
+// Spring web-приложение, просто добавьте зависимость spring-boot-starter-web, которая подтянет в проект все библиотеки, необходимые для разработки Spring MVC-приложений, таких как spring-webmvc, jackson-json, validation-api и Tomcat
+
+// ***** Введение в Spring Boot: создание простого REST API на Java / Модули Spring Boot
+//   https://habr.com/ru/post/435144/
 
 // Знакомство со Spring Boot
 //   https://topjava.ru/blog/introducing-spring-boot
@@ -1613,7 +1667,33 @@ public final class Integer {
 //   https://habr.com/ru/post/448094/
 
 // Jenkins + Docker + Gitlab + Maven создают среду непрерывной интеграции (что-то с примерами на китайском)
-//   https://russianblogs.com/article/5733701255/	
+//   https://russianblogs.com/article/5733701255/
 
 // -------------------------------------------------------
+//   Что надо знать по JAVA
+//   
+//   Java Core
+//     Коллекции 
+//     Массивы
+//     Хеш мапы
+//     Потоки
+//     
+//   JUNIT 4
+//   
+//   Сборщик
+//   	Gradle вместо Maven
+//     
+//   Spring Boot
+//   Spring Boot Starter JPA
+//   Spring JPA вместо Hibernate
+//   
+//   Менеджер пакетов
+//   	OpenShift - промышленный
+//   	Docker - домашний
+//   
+//   
+//   Фирма Фархад
+//   	Global Track
+//   	
 // -------------------------------------------------------
+
