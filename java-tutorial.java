@@ -7,6 +7,8 @@ Java-tutorial
 
 // -------------------------------------------------------
 
+// Чтобы изучить java, можно для начала прочитать книгу «Философия Java», Брюса Эккеля.
+
 // Топ-10 книг по Java для начинающих
 //  https://javarush.ru/groups/posts/top-7-knig-po-java
 
@@ -124,25 +126,10 @@ Java-tutorial
 
 
 // -------------------------------------------------------
-// IDEA
+// ItelliJ IDEA
+// Быстрые клавиши IDEA (shortcuts)
 
-// Быстрые клавиши IDEA
-/*
-    Shift-F10 		- Запуск
-	Ctrl+Alt+S		- Настройки
-	CTRL + F9		- Build
-	ALT + INSERT	- Создание объекта
-	Ctrl + P 		- Какие параметры принимает метод
-	Ctrl + Q		- Документация на метод
-	Shift + F6		- Рефакторинг / Переименовать класс
-	Ctrl + Alt + L	- Автоформатирование
-	Shift + Shift 	- Калькулятор / Поиск по всему
-	Ctrl + Q 	    - Показать JavaDoc
-	Ctrl + Shift + Up/Down - Перемещение строки вверх/вниз
-/**/
-
-// Editor basics
-//   https://www.jetbrains.com/help/idea/2021.3/using-code-editor.html
+// смотри idea-tutorial.md
 
 // -------------------------------------------------------
 // Шаблоны IDEA
