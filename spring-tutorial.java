@@ -528,5 +528,22 @@ spring-tutorial.java
 //   Фирма Фархад
 //   	Global Track
 //   	
+
+// -------------------------------------------------------
+// MAVEN Зависимости
+
+
+// org.springframework:spring-webmvc:5.3.15
+//   https://search.maven.org/artifact/org.springframework/spring-webmvc/5.3.15/jar
+
+// spring-context
+https://central.sonatype.com/artifact/org.springframework/spring-context
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>6.1.11</version>
+	</dependency>
+
 // -------------------------------------------------------
 

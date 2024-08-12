@@ -3,13 +3,13 @@ java-ee-tutorial.txt
 // Изученные материалы
 
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // Легенда
 [NR] - Прочитать потом
 [RTFM] - ссылки на официальные руководства
 ***** - полезная статья
 
-----------------------------------------------------------
+// ----------------------------------------------------------
 // Книги по Spring Framework
 
 // 2022 / Микросервисы Spring в действии / Джон Карнелл, Иллари Уайлупо Санчес
@@ -22,12 +22,12 @@ java-ee-tutorial.txt
 //   https://ichi.pro/ru/moi-lubimye-knigi-po-izuceniu-spring-boot-i-spring-cloud-v-2021-godu-129600996626140
 //	https://webcache.googleusercontent.com/search?q=cache:KviwgSNwUFoJ:https://ichi.pro/ru/moi-lubimye-knigi-po-izuceniu-spring-boot-i-spring-cloud-v-2021-godu-129600996626140+&cd=3&hl=ru&ct=clnk&gl=ru
 n
-----------------------------------------------------------
+// ----------------------------------------------------------
 // Stream API ???
 // Jax-RS
 // Liquibase
 
-----------------------------------------------------------
+// ----------------------------------------------------------
 // Gradle
 
 // Сборка Java-проекта с использованием Gradle
@@ -35,10 +35,10 @@ n
 	
 // H2 database example in Gradle
 	http://makble.com/h2-database-example-in-gradle
-----------------------------------------------------------
+// ----------------------------------------------------------
 // CheckStyle [NR]
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // REST
 
 	POST - Создание (через тело запроса json)
@@ -52,7 +52,7 @@ n
 	https://www.andreyolegovich.ru/PC/web/post_put.php
 	https://editor.swagger.io/
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // SPRING BOOT ШАБЛОНИЗАТОР
 	https://start.spring.io/
 	add spring web
@@ -61,8 +61,8 @@ n
 	https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.4&packaging=jar&jvmVersion=11&groupId=com.shestakov&artifactId=car-parking&name=car-parking&description=Demo%20project%20for%20Spring%20Boot&packageName=com.shestakov.car-parking&dependencies=web,h2,data-rest,data-jpa,lombok
 
 
----------------------------------------------------------
----------------------------------------------------------
+// ---------------------------------------------------------
+// ---------------------------------------------------------
 // CLEAN ARCHITECTURE / Чистая архитектура (Роберта К. Мартина) / 
 	https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
@@ -87,14 +87,14 @@ n
 	https://medium.com/swlh/clean-architecture-java-spring-fea51e26e00
 	https://github.com/soyjuanmalopez/clean-architecture.git
 	
-----------------------------------------------------------
+// ----------------------------------------------------------
 // Роберт Марин - «Чистая архитектура»
 	автор пропагандирует идею независимости (или минимизации зависимости) архитектуры приложения от внешних факторов: фреймворков, баз данных и прочих сторонних зависимостей
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // Organizing Layers Using Hexagonal Architecture, DDD, and Spring
 //   https://www.baeldung.com/hexagonal-architecture-ddd-spring
----------------------------------------------------------
+// ---------------------------------------------------------
 // ***** Микросервисы с Java - Часть 1
 	Microservices with Java — Part 1
 
@@ -125,7 +125,7 @@ n
 	https://github.com/caligula95/spring_crud
 	
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // H2 — открытая кроссплатформенная СУБД
 	https://ru.wikipedia.org/wiki/H2
 
@@ -153,7 +153,7 @@ remote
 // Spring Boot: создание и удаление JPA баз данных
 	https://java-ru-blog.blogspot.com/2020/03/spring-boot-jpa-create-drop-databases.html
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // ENTITIES / DOMAIN object / Работа с сущностями 
 // Доменный объект
 	https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82
@@ -183,17 +183,17 @@ remote
 	@Column(name = "personName", length = 15, nullable = false)
 	@Temporal(TemporalType.DATE)
 	@Enumerated(EnumType.STRING) / EnumType.ORDINAL
----------------------------------------------------------
+// ---------------------------------------------------------
 // Объекты значения / Value Object / VO
 
 // Entity vs Value Object (DDD)
 	https://habr.com/ru/post/275599/
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 //  DAO / data access object / абстрактный интерфейс к какому-либо типу базы данных
 	https://ru.wikipedia.org/wiki/Data_Access_Object
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // Lombok 
 
 // Lombok возвращает величие Java
@@ -205,12 +205,12 @@ remote
 	@NonNull
 	@Singular	@Wither 	@Accessors 
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // Работа с репозиториями
 // Difference Between CrudRepository and JPARepository in Java
 	https://www.tutorialspoint.com/difference-between-crudrepository-and-jparepository-in-java#:~:text=Crud%20Repository%20is%20the%20base,acts%20as%20a%20marker%20interface.&text=JPA%20also%20provides%20some%20extra,like%20findOne%2C%20saves%2C%20etc.&text=JPA%20repository%20also%20extends%20the%20PagingAndSorting%20repository.
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // DTO - Data Transfer Object
 	https://ru.wikipedia.org/wiki/DTO
 
@@ -223,7 +223,7 @@ remote
 	https://auth0.com/blog/how-to-automatically-map-jpa-entities-into-dtos-in-spring-boot-using-mapstruct/
 	https://github.com/Tonel/mapstruct-auth0
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // MapStruct
 	https://mapstruct.org/
 	
@@ -247,13 +247,13 @@ remote
 	https://russianblogs.com/article/54181583003/
 	https://github.com/Thinkingcao/SpringBootLearning/tree/master/springboot-mapstruct
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // Валидация
 
 // Настройка валидации DTO в Spring Framework
 	https://habr.com/ru/post/343960/
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // Библиотека Jackson
 		https://devcolibri.com/%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F-java-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2-%D0%B2-json/
 // Джексон Аннотации — Краткое руководство (много аннотаций)
@@ -265,16 +265,16 @@ remote
 // @JsonIgnore
 	а эта аннотация игнорирует данный атрибут и в результате конвертирования он не будет добавлен в JSON.
 
----------------------------------------------------------
+// ---------------------------------------------------------
 Unit тестирование с JUnit
 	https://devcolibri.com/unit-%d1%82%d0%b5%d1%81%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%81-junit/
----------------------------------------------------------
+// ---------------------------------------------------------
 // Eureka / aka Eureka Server также известен как Discovery Server.
 
 Spring Cloud Netflix: Eureka
 	https://medium.com/@kirill.sereda/spring-cloud-netflix-eureka-%D0%BF%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8-5b7829481717
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // Test with cURL
 
 Create a new product
@@ -297,21 +297,21 @@ And retrieving the Entity:
 	  "name": "john",
 	  "surname": "smith"
 	}
----------------------------------------------------------
+// ---------------------------------------------------------
 // Exceptions
 
 // Spring Boot MVC CRUD Example
 //   https://javatechonline.com/spring-boot-mvc-crud-example/
 
----------------------------------------------------------
+// ---------------------------------------------------------
 // Swagger (software)
 	https://en.wikipedia.org/wiki/Swagger_(software)
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // Flyway (software)
 	https://en.wikipedia.org/wiki/Flyway_(software)
 	
----------------------------------------------------------
+// ---------------------------------------------------------
 // JPA Controllers
 
 		
@@ -348,7 +348,7 @@ And retrieving the Entity:
 	        Collections.singletonMap("freespaces", parkspacesServiceImpl.getFreeSpaces()));
 		}
 		
----------------------------------------------------------
+// ---------------------------------------------------------
 // Использование @Query
 
 // Working with Spring Data Repositories [OLD]
@@ -372,7 +372,7 @@ And retrieving the Entity:
 // Весенние данные JPA @Query =)
 //   https://javascopes.com/spring-data-jpa-query-1f2cb35e/
 
----------------------------------------------------------
+// // ---------------------------------------------------------
 // СОБЫТИЯ
 
 // Spring Boot: события приложения и слушатели
@@ -393,4 +393,4 @@ And retrieving the Entity:
 // Boot yourself, Spring is coming (Часть 2) [NR]
 // О профилях и тонкостях запуска приложения.
 //   https://habr.com/ru/company/jugru/blog/425333/
----------------------------------------------------------
+// ---------------------------------------------------------
