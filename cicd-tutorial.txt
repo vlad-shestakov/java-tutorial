@@ -15,6 +15,38 @@ cicd-tutorial.txt
 // Jenkins + Docker + Gitlab + Maven создают среду непрерывной интеграции (что-то с примерами на китайском)
 //   https://russianblogs.com/article/5733701255/
 
+----------------------------------------------------------
+-- Docker
+
+-- 	 https://www.docker.com/
+--   https://ru.wikipedia.org/wiki/Docker
+--   https://docs.docker.com/get-docker/
+
+-- Install Docker Desktop on Windows
+--   https://docs.docker.com/desktop/windows/install/
+-- Установка Docker на Windows
+--   https://dker.ru/docs/install/windows/
+
+-- How to Enable a Hardware Virtualization
+--   https://www.virtualmetric.com/blog/how-to-enable-hardware-virtualization
+
+-- Процессор Intel Core i7-3770K
+--   8 МБ кэш-памяти, тактовая частота до 3,90 ГГц
+--   https://ark.intel.com/content/www/ru/ru/ark/products/65523/intel-core-i7-3770k-processor-8m-cache-up-to-3-90-ghz.html
+
+-- Системные требования
+	Windows 10 64-бит: Pro, Enterprise или Education (Сборка 15063 или более поздняя).
+	Функции Hyper-V и Containers Windows должны быть активны.
+	Минимальные требования для запуска клиента Hyper-V на Windows 10:
+
+	64 битный процессор с функцией Second Level Address Translation (SLAT)
+		4GB оперативной памяти
+		На уровне BIOS должна быть включена поддержка виртуализации.
+		
+-- Coreinfo reports i7-3770 CPU doesn't support EPT (aka SLAT) and VMX
+--   https://serverfault.com/questions/437660/coreinfo-reports-i7-3770-cpu-doesnt-support-ept-aka-slat-and-vmx
+
+
 
 // -------------------------------------------------------
 // Подъем контейнера в докере
