@@ -1,0 +1,107 @@
+cicd-tutorial.txt
+
+
+// -------------------------------------------------------
+// CI/CD
+//   Комбинация непрерывной интеграции (continuous integration) и непрерывного развертывания (continuous delivery или continuous deployment) ПО
+//   DevOps-программисты стремятся применять CI/CD практически для всех задач
+
+// DevOps (development & operations) — методология автоматизации технологических процессов сборки, настройки и развёртывания ПО
+//   https://ru.wikipedia.org/wiki/DevOps
+
+// Docker: как развернуть фуллстек-приложение и не поседеть
+//   https://habr.com/ru/post/448094/
+
+// Jenkins + Docker + Gitlab + Maven создают среду непрерывной интеграции (что-то с примерами на китайском)
+//   https://russianblogs.com/article/5733701255/
+
+
+// -------------------------------------------------------
+// Подъем контейнера в докере
+
+По инструкции
+	https://skillbox.ru/media/base/kak_rabotat_s_docker_upakovka_spring_boot_prilozheniya_v_konteyner/
+	
+Установить докер, запустить.
+Создать rest проект в джава, откомпилить jar в папку
+	Например в C:\SHESTAKOV\PRG\java\spring\_helloworlds\spring-docker-simple-2\target\spring-docker-simple-0.0.1-SNAPSHOT.jar
+	
+Создать докер файл
+	C:\SHESTAKOV\PRG\java\spring\_helloworlds\spring-docker-simple-2\Dockerfile
+	
+	// Dockerfile
+	FROM openjdk:17-jdk-slim
+	ARG JAR_FILE=target/spring-docker-simple-0.0.1-SNAPSHOT.jar
+	WORKDIR /opt/app
+	COPY ${JAR_FILE} app.jar
+	ENTRYPOINT ["java","-jar","app.jar"]
+	
+	// Для 11 Java
+	FROM adoptopenjdk/openjdk11:alpine-jre
+	
+	// Для 17 java
+	FROM openjdk:17-jdk-slim
+	
+Собрать образ докера с приложением
+	из каталога - C:\SHESTAKOV\PRG\java\spring\_helloworlds\spring-docker-simple-2
+	docker build -t spring-docker-simple:0.0.1 .
+	
+Проверьте, что образ создан командой 
+	docker images
+	
+	REPOSITORY             TAG       IMAGE ID       CREATED        SIZE
+	spring-docker-simple   0.0.1     892b60ee2399   19 hours ago   428MB
+	
+Запускаем контейнер
+	docker run -d -p 8080:8080 -t spring-docker-simple:0.0.1
+	
+	bd51ddb225ef61a9a4351e43b2e51e66fbc249601dd342efae8458960c79ea5d
+
+Проверим работоспособность
+	curl http://localhost:8080 
+	Hello, Docker!
+	
+Или в браузере.
+	
+Список запущенных контейнеров
+	docker ps
+	
+	CONTAINER ID   IMAGE                        COMMAND               CREATED         STATUS         PORTS                    NAMES
+	6507ec95db47   spring-docker-simple:0.0.1   "java -jar app.jar"   2 minutes ago   Up 2 minutes   0.0.0.0:8080->8080/tcp   naughty_hugle
+
+Cписок образов 
+	docker images
+	
+	REPOSITORY             TAG       IMAGE ID       CREATED        SIZE
+	spring-docker-simple   0.0.1     892b60ee2399   19 hours ago   428MB
+
+вывести логи контейнера
+	docker logs
+	docker logs 6507ec95db47 > out.log
+	
+	  .   ____          _            __ _ _
+	 /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+	( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+	 \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+	  '  |____| .__|_| |_|_| |_\__, | / / / /
+	 =========|_|==============|___/=/_/_/_/
+	[32m :: Spring Boot :: [39m              [2m (v3.2.8)[0;39m
+
+	[2m2024-08-15T11:43:37.136Z[0;39m [32m INFO[0;39m [35m1[0;39m [2m---[0;39m [2m[spring-docker-simple] [           main][0;39m [2m[0;39m[36mc.e.s.SpringDockerSimpleApplication     [0;39m [2m:[0;39m Starting SpringDockerSimpleApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/opt/app/app.jar started by root in /opt/app)
+	...
+	[2m2024-08-15T11:44:55.867Z[0;39m [32m INFO[0;39m [35m1[0;39m [2m---[0;39m [2m[spring-docker-simple] [nio-8080-exec-1][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+
+docker stop 
+	// останавливает контейнер. 
+	
+docker ps -a -q
+	// остановка всех запущенных контейнеров. - $(docker ps -a -q)
+	
+	docker ps -a -q
+	6507ec95db47
+	
+	docker stop $(docker ps -a -q)
+	Не помогло
+	
+// -------------------------------------------------------
+

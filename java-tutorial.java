@@ -907,6 +907,31 @@ class MySolution {
 // Java Map
 //   http://tutorials.jenkov.com/java-collections/map.html
 
+HashMap<String, Integer> charsMap = new HashMap<String, Integer>();
+charsMap.put(ch, 1);
+cnt = charsMap.get(ch);
+
+        String text = "aabbcaaacbфлфдлыфлодвдлфывффыв";
+        Integer cnt = 0;
+        System.out.printf("\n\ntext - %s\n", text);
+        HashMap<String, Integer> charsMap = new HashMap<String, Integer>();
+        String ch = "";
+        for (int i = 0; i < text.length(); i++) {
+            ch = text.substring(i, i + 1);
+            if (!charsMap.containsKey(ch)) {
+                charsMap.put(ch, 1);
+            } else {
+                charsMap.put(ch, charsMap.get(ch) + 1);
+            }
+            cnt = charsMap.get(ch);
+//            System.out.printf("/ ch - %s, cnt - %s\n", ch, cnt);
+        }
+
+        System.out.println(charsMap);
+        /*
+        text - aabbcaaacbфлфдлыфлодвдлфывффыв
+        {a=5, b=3, в=3, c=2, ф=6, д=3, л=4, ы=3, о=1}
+         */
 // -------------------------------------------------------
 // Пакеты
 

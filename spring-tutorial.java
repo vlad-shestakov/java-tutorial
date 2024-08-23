@@ -489,20 +489,6 @@ spring-tutorial.java
 //	 https://javarush.ru/groups/posts/2537-chastjh-8-pishem-neboljhshoe-prilozhenie-na-spring-boot (Spring Boot)
 
 // -------------------------------------------------------
-// CI/CD
-//   Комбинация непрерывной интеграции (continuous integration) и непрерывного развертывания (continuous delivery или continuous deployment) ПО
-//   DevOps-программисты стремятся применять CI/CD практически для всех задач
-
-// DevOps (development & operations) — методология автоматизации технологических процессов сборки, настройки и развёртывания ПО
-//   https://ru.wikipedia.org/wiki/DevOps
-
-// Docker: как развернуть фуллстек-приложение и не поседеть
-//   https://habr.com/ru/post/448094/
-
-// Jenkins + Docker + Gitlab + Maven создают среду непрерывной интеграции (что-то с примерами на китайском)
-//   https://russianblogs.com/article/5733701255/
-
-// -------------------------------------------------------
 //   Что надо знать по JAVA
 //   
 //   Java Core
