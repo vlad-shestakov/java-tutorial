@@ -1,0 +1,82 @@
+tomcat-tutorial.txt
+
+# -------------------------------------------------------
+# GLASSFISH is an open-source Jakarta EE platform application server 
+
+https://en.wikipedia.org/wiki/GlassFish
+
+https://glassfish.org/
+
+Eclipse GlassFish 7.x
+	https://glassfish.org/download.html
+	
+# -------------------------------------------------------
+Local Glassfish Server
+	
+	Setup path
+		D:\dev_programs\glassfish7
+
+	Start, stop scripts
+		D:\dev_programs\glassfish7\bin\startserv.bat
+		D:\dev_programs\glassfish7\bin\stopserv.bat
+
+	GlassFish Console - Common Tasks
+		http://localhost:4848/
+
+	Deployed Appications
+		http://localhost:4848/common/applications/applications.jsf
+	
+	http://localhost:8080/
+		Your server is now running
+	
+Delpoy appications
+	
+	Deployed Appications
+		http://localhost:4848/common/applications/applications.jsf
+		
+	Deploy...
+		Select file - D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\JavaEEHelloWorld-1.0-SNAPSHOT.war
+		Application Name: - JavaEEHelloWorld-1.0-SNAPSHOT
+		Context Root: - Если пустое, при запуске будет ссылка вида - /JavaEEHelloWorld-1182464394264601735.0-SNAPSHOT
+		Доступен по ссылке - http://localhost:8080/JavaEEHelloWorld-1182464394264601735.0-SNAPSHOT - Hello World!
+	
+	доступны Deploy/Undeploy/Enable/Disable
+	
+	Меняем Context Root: /
+		Disable/Enable
+		http://localhost:8080/ - Hello World!
+		
+
+
+
+	
+		
+# -------------------------------------------------------
+
+Attempting to start domain1.... Please look at the server log for more details.....
+	Connected to server
+	D:\dev_programs\glassfish7\glassfish\domains\domain1\logs\server.log
+
+Glassfish local
+	
+	Build - JavaEEHelloWorld:war
+		generated to compile
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\classes
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\generated-sources
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\JavaEEHelloWorld-1.0-SNAPSHOT
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\JavaEEHelloWorld-1.0-SNAPSHOT.war
+		copied to
+			D:\dev_programs\glassfish7\glassfish\domains\domain1\applications\JavaEEHelloWorld-1.0-SNAPSHOT
+	
+	Build - JavaEEHelloWorld:war exploded
+		generated to compile
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\classes
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\generated-sources
+			D:\R_STUDIO\PRG\java\java-ee-projects\JavaEEHelloWorld\target\JavaEEHelloWorld-1.0-SNAPSHOT
+		not coped to
+			D:\dev_programs\glassfish7\glassfish\domains\domain1\applications
+Glassfish remote
+	http://localhost:8080/JavaEEHelloWorld-1.0-SNAPSHOT/
+	D:\dev_programs\glassfish7\glassfish\domains\domain1\applications\JavaEEHelloWorld-1.0-SNAPSHOT
+	
+# -------------------------------------------------------

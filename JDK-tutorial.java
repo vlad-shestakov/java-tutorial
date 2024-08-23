@@ -39,7 +39,7 @@ javap -v HelloWorld.class
 //   https://www.dummies.com/article/technology/programming-web-design/java/how-to-use-the-javac-command-172116
 // как включить библиотеки в java без использования IDE (+ANT)
 //   https://coderoad.ru/5112607/%D0%BA%D0%B0%D0%BA-%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B8-%D0%B2-java-%D0%B1%D0%B5%D0%B7-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-IDE
-// Java。Hello World 6等级。:Java. Hello world в 6-й степени. (5+)
+// Java Hello World 6:Java. Hello world в 6-й степени. (5+)
 //   Внешние либы +ручной manifest
 //   https://stackoverflow.editcode.net/thread-119505-1-1.html
 
@@ -118,3 +118,4 @@ java -classpath classes_dir HelloWorld
 java -jar hw.jar 
 // Без манифеста
 java -classpath hw.jar HelloWorld
+

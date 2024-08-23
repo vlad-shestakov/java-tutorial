@@ -199,20 +199,36 @@ Java-tutorial
 // -------------------------------------------------------
 // Типы данных
 // примитивные типы
-	int 	num = 123;
+
+// Целые
+	byte	с = 0х55;			// 8 bits. диапазон — от -128 до 127. Реализация Java из соображений эффективности хранит переменные типа byte и short в виде 32-битовых значений
+	short	t = Ox55aa;			// 16-битовый. диапазон — от -32768 до 32767. Реализация Java из соображений эффективности хранит переменные типа byte и short в виде 32-битовых значений
+	int 	num = 123;			// 32-битных целых чисел со знаком. Диапазон -2147483648 до 2147483647
+	int 	j = 0x55aa0000;
+	long	n = Ох55аа000055аа0000;		// 64-битовых чисел со знаком. Его диапазон допустимых значений достаточно велик даже для таких задач, как подсчет числа атомов во вселенной.
 	int 	a = 42, b = 11;
-	float  	foo = 3/2;
-	double	pi  = 3.14;
-	char 	group = 'Z';	 // используется для хранения одного символа. В отличие от строк, значение переменной типа char помещается в одинарные кавычки.
-	boolean atHome = true;
-	byte
-	short
-	long
-	boolean f1 = x1 > x2;
+// Вещественные
+	float  	foo = 3/2;			// 32 bits
+	double	pi  = 3.14;			// 64 bits
+// Символьные	
+	char 	group = 'Z';	 	// используется для хранения одного символа. В отличие от строк, значение переменной типа char помещается в одинарные кавычки.
 // Ссылочные
 	String 	abs = "123";
 	int[]	array = {1,2,3}; // массив
 	String  str = null; // ссылка никуда не указывает
+
+// Приведение типа
+	int a = 100;
+	byte b = (byte) a;	// для занесения значения типа int в переменную типа byte необходимо использовать оператор приведения типа. 
+
+	byte b = 50;
+	b = (byte) (b*2);	// Или будет ошибка - (Несовместимый тип для =. Необходимо явное преобразование int в byte) / ^ Incompatible type for =. Explicit cast needed to convert int to byte.
+	// Если в выражении используются переменные типов byte, short и int, то во избежание переполнения тип всего выражения автоматически повышается до int. 
+	// Если же в выражении тип хотя бы одной переменной — long, то и тип всего выражения тоже повышается до long. 
+	// He забывайте, что все целые литералы, в конце которых не стоит символ L (или 1), имеют тип int.
+	// Если выражение содержит операнды типа float, то и тип всего выражения автоматически повышается до float. 
+	// Java рассматривает все литералы с плавающей точкой, как имеющие тип double.
+
 
 // -------------------------------------------------------
 // Вывод в консоль
@@ -233,7 +249,7 @@ Java-tutorial
 
 	int x = 42;
 	int y = 84;
-	System.out.println(x + " " + y);    // 42 84
+	System.out.println(x + " " + y);    // 42 84 - Преобразовывает неявно в строку
 	System.out.println(x + z);          // 126
 
 
@@ -333,6 +349,9 @@ class MySolution {
 15 / 3 = 5;
 15.0 / 3 = 5.0;
 15 / 3.0 = 5.0;
+
+1E-4; // = 0,0001
+
 /**/
 // -------------------------------------------------------
 // Операторы
@@ -352,9 +371,9 @@ class MySolution {
 	// В префиксной форме оператор появляется перед операндом, в то время как в постфиксной форме оператор появляется после операнда.
 	// Давайте разберёмся, как работают эти две формы.
 	int x = 50;
-	int y = ++x; // x == 51, y == 51
+	int y = ++x; // y == 51, x == 51
 	int x = 50;
-	int y = x++; // x == 51, y == 50
+	int y = x++; // y == 50, y == 51
 
 	// Побитовые операции
 	int neg = ~a;  	  // byte NOT инверсия битов
@@ -402,10 +421,10 @@ class MySolution {
 	Math.toDegrees(x) - переводит угол из радиан в градусы.
 	Math.toRadians(x) - переводит угол из градусов в радианы.
 
-	Math.ceil(25.364789));    // 26.0  - // округляет  до ближайшего большего целого +бесконечность
-	Math.ceil(-25.364789));    // -25.0
-	Math.floor(25.364789));    	// 25.0
-	Math.floor(-25.364789));    	// 26.0
+	Math.ceil(25.364789));    	// 26.0  - // округляет  до ближайшего большего целого +бесконечность
+	Math.ceil(-25.364789));    	// -25.0
+	Math.floor(25.364789));    	// 25.0		// округляет  до ближайшего меньшего целого
+	Math.floor(-25.364789));	// 26.0 
 
 	// Округление (способ имеет низкую точность из-за погрешностей хранения в памяти компьютера чисел типа double)
 	double x = 25.364789;
@@ -425,14 +444,25 @@ class MySolution {
 
 // -------------------------------------------------------
 // BigInteger / Short
+// Для хранения чисел, которые превышают допустимый диапазон?
 
 	BigInteger bigValue = BigInteger.valueOf(123);
 	Short shortVal = Integer.valueOf(2022).shortValue();
-
+	
+	// у класса есть константы:
+		BigInteger.ZERO
+		BigInteger.ONE
+		BigInteger.TEN
+		
 	// Convert int to short in Java
 	//   https://simplesolution.dev/java-convert-int-to-short/
 
-
+	BigInteger firstValue = new BigInteger("37995");
+	BigInteger secondValue = new BigInteger("35466");
+	BigInteger resultValue =  firstValue.add(secondValue);//73461 // суммирования
+	BigInteger resultValue =  firstValue.multiply(secondValue);//1347530670 // умножения
+	BigInteger resultValue =  firstValue.remainder(secondValue);//2529	// операции нахождения остатка при делении
+	BigInteger resultValue = firstValue.mod(secondValue); //-34 mod 5 = 1 // с вычислением mod
 
 
 // -------------------------------------------------------
@@ -445,12 +475,13 @@ class MySolution {
 	char a = "\t";	// таб
 	char a = "\n";	// перевод строки
 	char a = "\r";	// возврат каретки
-	char a = "\'"; 	//  '
+	char a = "\'"; 	//  ' - эскейпинг кавычки
 	char a = "\\"; 	// "\"
 	char a = "03A9"; 	//  unicode омега
 	// В Джава все литералы хранятся в UTF-16
 
-	System.out.println('a' + 'b'); // 195 // Соединит не два чара а сложит два числа - коды символов
+	System.out.println('a' + 'b'); // 195 // Чар приводится к кодам символов. Соединит не два чара а сложит два числа - коды символов
+	
 // -------------------------------------------------------
 // Даты
 
@@ -464,8 +495,8 @@ class MySolution {
 	Date dt = Date.valueOf(LocalDate.now());
 
 
-
-	SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+	// Использование форматтера
+	SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");	// 
 	Date date = new Date(System.currentTimeMillis());
 	System.out.println(formatter.format(date));
 	// 2020-02-05 at 10:11:33 UTC
@@ -485,6 +516,7 @@ class MySolution {
 	System.out.println(formatter.format(calendar.getTime()));
 
 	LocalDate date = LocalDate.now(); // Gets the current date
+	// С началом Java 8 была введена новая дата и время API. Класс LocalDate предоставляет методы isBefore(), isAfter() и isEqual() для сравнения дат.
 	// This time around, instead of initializing a new object, we're calling the static method now() which returns the current date according to the system clock, with the default time-zone.
 	// We can format this object:
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -558,7 +590,7 @@ class MySolution {
 	char letter_0 = word.charAt(0); // Получение элемента строки по его индексу.
 	System.out.println(letter_0); // a
 
-	// СРАВНЕНИЕ СТРОК
+	// СРАВНЕНИЕ СТРОК (equals / equalsIgnoreCase)
 	// if (str == "123") Не будет работать!!!!
 	String str = "asd";
 	if (str.equals("123")) ...
@@ -819,10 +851,10 @@ class MySolution {
 		System.out.println(s); //На новой строке
 		if (s.charAt(0) == 'f') {
 			System.out.println(s);
-			s = "deleted";
+			s = "deleted";	// Переименовываем у копии элементы "four", "five", "forty two" > "deleted"
 		}
 	}
-	System.out.println(numbers1[3]);    // four
+	System.out.println(numbers[3]);    // four - Берет исходный массив
 
 	// Формирование массива через split
 	// При разрезании получается массив именно из элементов типа String.
@@ -836,7 +868,7 @@ class MySolution {
 
 // Класс Arrays
 
-	// toString
+	// Перевести в печатный вид - toString()
 	int[] array = {1, 2, 3, 4, 5};
 	System.out.println(Arrays.toString(array));       // [1, 2, 3, 4, 5]
 
@@ -981,12 +1013,16 @@ org.vladshestakov.HomeLibary
 	public  	объект виден отовсюду
 
 	static		объект доступен даже без объявления экземпляра объекта
-	final		Признак константы. Невозможность изменить объект (кроме содержимого массивов, этоже ссылки)
+	final		Признак константы. Невозможность изменить объект (кроме содержимого массивов, этоже ссылки),  от класса нельзя наследоваться
 	native		Значит исходники не представлены, они в исходном коде
 
 	void		Отсутствие значения
 	throws		Список объектов типа Exception
 
+	public static void main(String[] args) {
+	// static - метод может вызываться без создания экземпляра класса
+	// видит только другие статические объекты
+	
 -------------------------------------------------------
 // Объявления класса
 
@@ -1010,9 +1046,6 @@ public final class Integer {
 
 }
 
-	public static void main() {}
-	// static - метод может вызываться без создания экземпляра класса
-	// видит только другие статические объекты
 
 	// Константы
 	public static final String DEFAULT_DELIMITER = ", "; // Разделитель даных по-умолчанию
@@ -1031,6 +1064,30 @@ public final class Integer {
 	if (myObject instanceof Object) {} //Проверка на принадлежность объекта к классу
 
 
+
+// -------------------------------------------------------
+// Создание интерфейса
+// 		https://javarush.com/groups/posts/1981-dlja-chego-v-java-nuzhnih-interfeysih
+
+	public interface Swimmable  {
+		 public void swim();
+	}
+
+	public class Duck implements Swimmable {
+		public void swim() {
+			System.out.println("Уточка, плыви!");
+		}
+	}
+
+	public class App {
+		
+		import Duck;
+
+		public static void main(String[] args) {
+			Duck duck = new Duck();
+			duck.swim();
+		}
+	}
 
 // -------------------------------------------------------
 // Методы пакета
@@ -1124,41 +1181,6 @@ public final class Integer {
 	// Выполнит - x y c g
 
 // -------------------------------------------------------
-// Maven
-
-// Переходим на Maven
-//   Источник <https://java-course.ru/begin/maven_first/>
-
-// Maven и java
-//   https://java-master.com/maven-%d0%b8-java/
-
-// -------------------------------------------------------
-// Java DATABASE / JDBC
-
-// JDBC (англ. Java DataBase Connectivity — соединение с базами данных на Java) — платформенно независимый промышленный стандарт взаимодействия Java-приложений с различными СУБД, реализованный в виде пакета java.sql, входящего в состав Java SE.
-
-
-// Руководство Java JDBC
-// https://betacode.net/10167/java-jdbc
-
-// Oracle JDBC Download
-//   https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
-
-// SQL Injection Prevention Cheat Sheet
-//   https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
-
-// Oracle Java JDBC: Get Primary Key of Inserted record
-//   https://www.viralpatel.net/oracle-java-jdbc-get-primary-key-insert-sql/
-
-// Базы данных на Java — введение
-// 	 https://java-course.ru/begin/database01/
-// Возможности JDBC — второй этап
-//   https://java-course.ru/begin/database02/
-// JAR-файлы — что это такое ?
-//   https://java-course.ru/begin/jar/
-
-
-// -------------------------------------------------------
 // Аннотации
 //   https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F_(Java)
 
@@ -1190,6 +1212,7 @@ public final class Integer {
 	// extends - признак наследования класса
 	// (необязательный) Override - Проверка компилятором на верность наследования
 
+
 // -------------------------------------------------------
 // Maven
 
@@ -1224,5 +1247,3 @@ public final class Integer {
 // JAR-файлы — что это такое ?
 //   https://java-course.ru/begin/jar/
 
-
-// -------------------------------------------------------
